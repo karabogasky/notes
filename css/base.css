@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto|Roboto+Slab);
+
+body {
+  margin: 2em;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+header,
+main {
+  margin: 0 auto;
+  width: 650px;
+  line-height: 1.5;
+}
+
+section {
+  padding: 2em;
+  margin: 3em 0;
+  border: 1px solid #ccc;
+}
+
+a {
+  color: rgb(34,124,238);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: rgb(215,83,46);
+  -moz-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h2 span {
+  display: block;
+}
+
+table {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+table th,
+table, td {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+#retrospective ol li {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+#jpg img {
+  border: 1px solid #222;
+}
+
+#svg img {
+  margin-right: 1em;
+}
+
+#png img:last-child {
+  margin-right: 0;
+}
+
+#svg img.sm {
+  width: 50px;
+}
+
+#svg img.md {
+  width: 100px;
+}
+
+#svg img.lg {
+  width: 200px;
+}
+
+#browsers {
+  margin-bottom: 2.5em;
+}
+
+#browsers img:first-child {
+  position: relative;
+  top: 8px;
+}
+
+#browsers img[src$=".svg"] {
+  width: 80px;
+  display: inline-block;
+  padding-right: 0.75em;
+}
+
+#browsers img[src$=".svg"]:last-child {
+  padding-right: 0;
+}
+
+.resized {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+
+@media print {
+  html {
+    font-size: 12pt;
+    color: #000;
+    background: transparent;
+  }
+
+  @page {
+    margin: 0.5in;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  footer {
+    display: none;
+  }
+
+}

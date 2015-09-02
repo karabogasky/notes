@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/base.css" rel="stylesheet" />
+    <title>HTML Anatomy</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Anatomy</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Elements</h2>
+
+        <p><em>Elements</em> are also known as <em>tags</em>.</p>
+
+        <p>(Most) elements have an opening and closing tag.</p>
+
+        <p><code>&lt;element&gt;&lt;/element&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Attributes &amp; Values</h2>
+
+        <p>Some elements may contain additional 'settings.'</p>
+
+        <p>We set these through <em>attributes</em> and <em>values</em></p>
+
+        <p><code>&lt;element attribute="value"&gt;&lt;/element&gt;</code></p>
+      </section>
+
+
+      <section>
+
+        <p><code>&lt;p class="intro"&gt;This is a sentence.&lt;/p&gt;</code></p>
+
+        <ol>
+          <li>What is the <strong>element</strong>?</li> <!-- p -->
+          <li>What is the <strong>attribute</strong>?</li> <!-- class -->
+          <li>What is the <strong>value</strong>?</li> <!-- intro -->
+        </ol>
+      </section>
+
+
+      <section>
+
+        <p><code>&lt;a href="http://miami.edu/"&gt;University of Miami&lt;/a&gt;</code></p>
+
+        <ol>
+          <li>What is the element?</li> <!-- a -->
+          <li>What is the attribute? <!-- href -->
+            <ul>
+              <li>What do you think the attribute stands for?</li> <!-- hypertext reference -->
+            </ul>
+          </li>
+          <li>What is the value? <!-- http://miami.edu/ -->
+            <ul>
+              <li>The value is a...?</li> <!-- URL - - uniform resource locator -->
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+
+      <section>
+        <h2>Basic Elements</h2>
+
+        <p>Basic elements construct our page.</p>
+
+        <p><code>&lt;html&gt;</code>: defines the HTML document</p>
+
+        <p><code>&lt;head&gt;</code>: contains information about the document</p>
+
+        <p><code>&lt;body&gt;</code>: includes content to be displayed</p>
+      </section>
+
+
+      <section>
+        <h2>Semantic Elements</h2>
+
+        <p><em>Semantic elements</em> describe the content enclosed within.</p>
+
+        <p><code>&lt;p&gt;</code>: a paragraph</p>
+
+        <p><code>&lt;strong&gt;</code>: strong emphasis</p>
+
+        <p><code>&lt;ol&gt;</code>: an ordered list</p>
+
+        <p><code>&lt;a&gt;</code>: an anchor (hyperlink)</p>
+      </section>
+
+
+      <section>
+        <h2>Structural Elements</h2>
+
+        <p>New to HTML5, <em>structural elements</em> describe the parts of a page.</p>
+
+        <p><code>&lt;header&gt;</code>: header, masthead</p>
+
+        <p><code>&lt;nav&gt;</code>: navigation</p>
+
+        <p><code>&lt;main&gt;</code>: main content</p>
+
+        <p><code>&lt;footer&gt;</code>: footer</p>
+      </section>
+
+
+      <section>
+        <h2>Generic Elements</h2>
+
+        <p><em>Generic elements</em> are solely used to group other elements for styling.</p>
+
+        <p>They do not provide any context, and should therefore be used sparingly.</p>
+
+        <p><code>&lt;div&gt;</code>: generic 'block' element</p>
+
+        <p><code>&lt;span&gt;</code>: generic 'inline' element</p>
+
+        <p><small>We will address 'block' and 'inline' elements when we cover <abbr title="Cascading Style Sheets">CSS</abbr>.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Self-closing elements</h2>
+
+        <p>Some tags to not require a closing element. These include:</p>
+
+        <p><code>&lt;img /&gt;</code></p>
+
+        <p><code>&lt;input /&gt;</code></p>
+
+        <p><code>&lt;link /&gt;</code></p>
+
+        <p><code>&lt;meta /&gt;</code></p>
+
+        <p>These are generally <em>semantic</em> tags.</p>
+
+        <p>In HTML5, the closing slash is optional, however, it provides a visual cue when scanning HTML.</p>
+      </section>
+
+
+      <section>
+        <h2>HTML Element Reference</h2>
+
+        <p>"HTML &amp; CSS" by Jon Duckett includes a reference of HTML tags at the end of the book. A comprehensive, updated list of standard tags can be found through the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developers Network: HTML Element Reference</a>.</p>
+
+        <p>Utilize the tags described toward the center of the page (other than the "Obsolete and Deprecated Elements") at the end.</p>
+
+        <p>Beware the list on the left side, as it contains elements which may have been used in old browsers, but were never standardized.</p>
+      </section>
+
+      <p><a href="06-html-best-practices.html">HTML Best Practices &raquo;</a></p>
+
+    </main>
+  </body>
+</html>

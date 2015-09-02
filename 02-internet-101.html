@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/base.css" rel="stylesheet">
+    <title>Internet 101</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Internet 101</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Origins of the Internet</h2>
+
+        <ul>
+          <li><abbr title="Defense Advanced Research Projects Agency">DARPA</abbr> (Defense Advanced Research Projects Agency) needed:
+            <ul>
+              <li>shared mainframe resources</li>
+              <li>secure communication in a crisis situation (nuclear war)</li>
+            </ul>
+          <li>Resulted in ARPANET, a four-node network unveiled in 1969
+            <ul>
+              <li>University of California, Los Angeles</li>
+              <li>Stanford Research Institute</li>
+              <li>University of California, Santa Barbara</li>
+              <li>University of Utah</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>ARPANET, 1969</h2>
+
+        <img src="img/02-arpanet.gif" alt="ARPANET, 1969" />
+      </section>
+
+
+      <section>
+        <h2>'lo' and behold!</h2>
+
+        <p>The first message transmitted on ARPANET:</p>
+
+        <p><strong><code>lo</code></strong></p>
+
+        <p>It <em>was</em> supposed to be "<code>login:</code>" ... but the computer crashed. :)</p>
+      </section>
+
+
+      <section>
+        <h2>Netiquette</h2>
+
+        <p>Early networks followed a somewhat unwritten social protocol. From MIT's Computing Handbook:</p>
+
+        <blockquote>
+          <p>Personal messages to other ARPANet subscribers ... are generally not considered harmful ... Sending electronic mail over the ARPANet for commercial profit or political purposes is both anti-social and illegal. By sending such messages, you can offend many people, and it is possible to get MIT in serious trouble...</p>
+        </blockquote>
+
+        <p><small>Quite the far cry from Reddit, yes? :}</small></p>
+
+      </section>
+
+
+
+      <section>
+        <h2>Beyond ARPANET</h2>
+
+        <ul>
+          <li>Grew to 213 host computers by 1981</li>
+          <li>Led to the development of subnetworks (i.e. MILNet)</li>
+          <li>Evolved into NSFNet in 1985
+            <ul>
+              <li>The Internet's 'backbone'</li>
+            </ul>
+          </li>
+          <li>ARPANET decommissioned in 1990</li>
+          <li>S. 272: High Performance Computing Act of 1991
+            <ul>
+              <li>Then-Senator Al Gore (D-TN) proposes the implementation of a national high-performance computing program</li>
+            </ul>
+          </li>
+
+          <li>NSFNet decommissioned in 1995, removing restrictions on commercial traffic</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>ARPANET Lessons</h2>
+
+        <ul>
+          <li>Standardized communication protocols
+            <ul>
+              <li>Transmission Control Protocol (<abbr title="Transmission Control Protocol">TCP</abbr>)</li>
+              <li>Internet Protocol (<abbr title="Internet Protocol">IP</abbr>)</li>
+            </ul>
+          <li>Applications
+            <ul>
+              <li>E-mail</li>
+              <li>File Transfer Protocol (<abbr title="File Transfer Protocol">FTP</abbr>)</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Transmission Control Protocol (TCP)</h2>
+
+        <ol>
+          <li>Computer A breaks a file into <em>packets</em>, attaches <em>metadata</em>.</li>
+          <li>The packets are sent over a network to Computer B.</li>
+          <li>Computer A receives, reassembles and verifies the file is correct.</li>
+        </ol>
+      </section>
+
+
+      <section>
+        <h2>What if a packet goes missing?</h2>
+
+        <p>The receiving computer will refer to the metadata sent with the file, as if it were a checklist and request a re-send.</p>
+
+        <p><strong>Computer B:</strong> Hey, I'm missing packet No. 615!</p>
+
+        <p><strong>Computer A:</strong> Let me try again.</p>
+
+        <p><strong>Computer B:</strong> Got it!</p>
+      </section>
+
+
+      <section>
+        <h2>Internet Protocol</h2>
+
+        <ul>
+          <li>Determines the path across a network which packets travel</li>
+          <li>Provides each <em>node</em> on a network with a unique address</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>What's a node?</h2>
+
+        <p>A <em>node</em> is anything connected to a network, in this case, the Internet.</p>
+
+        <ul>
+          <li>server</li>
+          <li>laptop</li>
+          <li>mobile phone</li>
+          <li>coffee machine</li>
+          <li>house!</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Every device in the world...</h2>
+
+        <img src="img/02-internet-map.png" class="resized" alt="A map of every device in the world connected to the Internet (circa 2014); source: Shodan" />
+      </section>
+
+
+      <section>
+        <h2>IP Addresses</h2>
+
+        <ul>
+          <li>Each node has an Internet Protocol address</li>
+          <li>Internet Assigned Numbers Authority (<abbr title="Internet Assigned Numbers Authority">IANA</abbr>) delegates blocks of addresses to five regional Internet registries</li>
+          <li>IPv4 offers 2<sup>32</sup> possible combinations of addresses
+            <ul>
+              <li><strong>Example:</strong> 99.66.22.215</li>
+              <li>4.2 billion combinations have been exhausted (except for Africa)</li>
+            </ul>
+          </li>
+          <li>IPv6 offers 2<sup>128</sup> combinations</li>
+            <ul>
+              <li><strong>Example:</strong> 2602:306:3421:6d70:157d:7725:4f7:b182</li>
+              <li>These have been in use since mid 2000s</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>What is your IP Address?</h2>
+
+        <ul>
+          <li><a href="http://fmbip.com">Find Me By IP</a></li>
+          <li>Identifies location as it relates to the Internet and physical geography</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Domain Name System</h2>
+
+        <ul>
+          <li>A 'directory' for the Internet</li>
+          <li>Overseen by <abbr title="Internet Corporation For Assigned Names and Numbers">ICANN</abbr> (Internet Corp. For Assigned Names &amp; Numbers)</li>
+          <li>Each domain is mapped to an IP address
+            <ul>
+              <li><a href="http://google.com">google.com</a> = <a href="http://173.194.37.102">173.194.37.102</a></li>
+              <li><a href="http://umiami.edu">umiami.edu</a> = <a href="http://129.171.32.100">129.171.32.100</a></li>
+            </ul>
+          </li>
+          <li>A Domain Name Server routes requests to the correct IP address</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>The Internet in Action</h2>
+
+        <p><code>traceroute</code> is a command line tool which tells us:</p>
+
+        <ul>
+          <li>a packet's path to its final destination</li>
+          <li>the delay between each 'hop' from node to node</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Anatomy of a Domain Name</h2>
+
+        <p><strong>email.miami.edu</strong></p>
+
+        <ul>
+          <li><em>edu</em> - top-level domain</li>
+          <li><em>umiami</em> - domain
+            <ul>
+              <li>we can 'reserve' these for our own use</li>
+            </ul>
+          </li>
+          <li><em>email</em> - subdomain (optional)
+            <ul>
+              <li>May point to a different server, directory</li>
+            </ul>
+          </li>
+          <li>Combined, these create a <em>fully qualified domain name</em></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Top-level domains: Original / Generic</h2>
+
+        <ul>
+          <li>.com (commercial)</li>
+          <li>.net (network)</li>
+          <li>.org (organization)</li>
+          <li>.edu (educational)</li>
+          <li>.gov (government)</li>
+          <li>.mil (military)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Top-level domains: Countries</h2>
+
+        <ul>
+          <li>Two-letter country code
+            <ul>
+              <li>.us (United States)</li>
+              <li>.ca (Canada)</li>
+              <li>.de (Germany)</li>
+            </ul>
+          </li>
+          <li>Some nations may restrict access to its citizens</li>
+          <li>Others have cashed in on domain 'hacking' (i.e. .me, .tv., .co)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Top-level domains: New</h2>
+
+        <p>In 2008, ICANN began accepting applications for new top-level domains.</p>
+
+        <p>Many of these are generic, (i.e. .club, .sport) and accessible to all.</p>
+
+        <p>Some are limited for use by the company which holds a trademark (i.e. .android, .barclays, .microsoft).</p>
+
+        <p>ICANN recognizes over a thousand custom domains, but not all have been released for use.</p>
+      </section>
+
+
+      <section>
+        <h2>Who can acquire a domain name?</h2>
+
+        <p><strong>Anyone!</strong></p>
+
+        <ul>
+          <li>Obtained through a <em>domain name registrar</em></li>
+          <li>Fees vary depending on the name, sales</li>
+          <li>Minimum one-year lease</li>
+          <li>No one 'owns' a domain</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Domain Name Directory</h2>
+
+        <p><code>whois</code> is a command line tool which tells us:</p>
+
+        <ul>
+          <li>who a domain name is registered to</li>
+          <li>contact information for the lessee</li>
+            <ul>
+              <li>some registrars offer privacy protection</li>
+            </ul>
+          </li>
+          <li>when the registration will expire</li>
+        </ul>
+      </section>
+
+      <p><a href="03-world-wide-web.html">World Wide Web &raquo;</a></p>
+
+
+    </main>
+  </body>
+</html>

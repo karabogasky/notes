@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/base.css" rel="stylesheet">
+    <title>World Wide Web: Clients &amp; Servers</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>World Wide Web</h1>
+      <h2>Clients &amp; Servers</h2>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>What is a client?</h2>
+
+        <p>Computers which access a service made available by a server on a network (i.e. Internet).</p>
+
+        <ul>
+          <li>Email</li>
+          <li>Chat</li>
+          <li>Web</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Modern Web Browsers</h2>
+
+        <div id="browsers">
+          <img src="img/04-firefox.svg" alt="Firefox" />
+          <img src="img/04-internet-explorer.svg" alt="Internet Explorer" />
+          <img src="img/04-microsoft-edge.svg" alt="Microsoft Edge" />
+          <img src="img/04-google-chrome.svg" alt="Google Chrome" />
+          <img src="img/04-opera.svg" alt="Opera" />
+          <img src="img/04-safari.svg" alt="Safari" />
+        </div>
+
+        <ul>
+          <li>Firefox</li>
+          <li>Internet Explorer
+            <ul>
+              <li>Microsoft Edge</li>
+            </ul>
+          </li>
+          <li>Google Chrome</li>
+          <li>Opera</li>
+          <li>Safari</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Market Share</h2>
+
+        <ol>
+          <li>Chrome</li>
+          <li>Internet Explorer</li>
+          <li>Firefox</li>
+          <li>Safari</li>
+          <li>Opera</li>
+          <li>Other</li>
+        </ol>
+
+        <p><a href="http://gs.statcounter.com/">Top 5 Desktop, Tablet &amp; Console Browsers</a></p>
+
+      </section>
+
+
+      <section>
+        <h2>Why so many browsers?</h2>
+
+        <p><strong>Freedom of choice!</strong> :)</p>
+
+        <p>Forced to adopt web standards, browser makers discovered the browser itself could be a commodity by adding features and services.</p>
+
+        <p>Remember: Open-source design encourages participation, experimentation.</p>
+
+        <p>Browser makers try to improve, expand our browsing experience. (It also reinforces their corporate brand.)</p>
+      </section>
+
+
+      <section>
+        <h2>Understanding Browsers</h2>
+
+        <ul>
+          <li>Browser has a layout and rendering 'engine'
+            <ul>
+              <li>Many based on open-source code</li>
+              <li>Makers aim for improved speed, user experience</li>
+            </ul>
+          </li>
+          <li>Modern browsers follow W3C standards</li>
+          <li>New standards are implemented as they are approved by W3C...</li>
+          <li>how quickly a feature is added depends on the browser maker</li>
+        </ul>
+
+        <p><a href="http://caniuse.com" target="_blank">Can I Use...?</a></p>
+      </section>
+
+
+      <section>
+        <h2>What is a server?</h2>
+
+        <p>Computers which are set up solely to handle service requests from clients. Users typically connect to a server through a network (i.e. the Internet).</p>
+
+        <ul>
+          <li>Database</li>
+          <li>File</li>
+          <li>Email</li>
+          <li>Print</li>
+          <li>Web</li>
+        </ul>
+
+        <p>A server can be a single, physical machine which handles multiple tasks. For speed and efficiency, sometimes a server is dedicated to handling a single task.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Application Protocols</h2>
+
+        <p>Computers and servers connect through <em>transfer protocols</em> (i.e. TCP/IP).</p>
+
+        <p>Tools which interact with network have their own <em>application protocols</em>.</p>
+
+        <ul>
+          <li><abbr title="File Transfer Protocol">FTP</abbr>: File Transfer Protocol</li>
+          <li><abbr title="Network News Transfer Protocol">NNTP</abbr>: Network News Transfer Protocol</li>
+          <li><abbr title="Secure Shell">SSH</abbr>: Secure Shell</li>
+          <li><abbr title="Simple Mail Transfer Protocol">SMTP</abbr>: Simple Mail Transfer Protocol</li>
+        </ul>
+
+        <p>All require TCP/IP in order to work.</p>
+
+      </section>
+
+
+      <section>
+        <h2><abbr title="Hypertext Transfer Protocol">HTTP</abbr></h2>
+
+        <p>The web has its own protocol: Hypertext Transfer Protocol.</p>
+
+        <ul>
+          <li>facilitates communication between a client and server</li>
+          <li>a client (web browser) requests a file from a web server</li>
+          <li>the web server acknowledges the request by sending response</li>
+          <li>if the response is "OK!", the requested file is sent</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Identifying Sites &amp; Pages</h2>
+
+        <p>How do we indicate which web site or file we are looking for on a server?</p>
+
+        <p>HTTP relies on a client providing a <abbr title="Uniform Resource Locator">URL</abbr>, or <em>Uniform Resource Locator</em>, a standard way of identifying a server, directory or file on the web.</p>
+
+        <p>A URL's structure consists of:
+
+        <ul>
+          <li>scheme name (protocol used to transfer the file)
+            <ul>
+              <li><em>http:</em></li>
+              <li><em>https:</em></li>
+            </ul>
+          </li>
+          <li>hierarchy (the path to the file)
+            <ul>
+              <li>//com.miami.edu/about/about-the-school</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Requests</h2>
+
+        <p>The most common requests a client can make to a server are GET and POST.</p>
+
+        <ul>
+          <li><strong>GET</strong> retrieves data
+            <ul>
+              <li>most common request when browsing the web</li>
+            </ul>
+          </li>
+          <li><strong>POST</strong> sends data back to a server to be saved
+            <ul>
+              <li>post to a message board, update a database, submit a form</li>
+            </ul>
+          </li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>HTTP Status Codes</h2>
+
+        <p>When a client makes a request, it will respond with a <em>status code</em>.</p>
+
+        <ul>
+          <li><strong>1xx:</strong> Informational</li>
+          <li><strong>2xx:</strong> Success
+            <ul>
+              <li><strong>200:</strong> OK! (file transfer begins)</li>
+            </ul>
+          </li>
+          <li><strong>3xx:</strong> Redirection
+            <ul>
+              <li><strong>301:</strong> Moved Permanently</li>
+            </ul>
+          </li>
+          <li><strong>4xx:</strong> Client Error
+            <ul>
+              <li><strong>404:</strong> File Not Found</li>
+            </ul>
+          </li>
+          <li><strong>5xx:</strong> Server Error
+            <ul>
+              <li><strong>500:</strong> Internal Server Error</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <p><a href="05-html-anatomy.html">HTML Anatomy &raquo;</a></p>
+
+
+    </main>
+
+  </body>
+</html>
