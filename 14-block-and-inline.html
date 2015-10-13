@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Block, Inline &amp; Inline-Block Elements</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Block, Inline &amp; Inline-Block Elements</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>HTML elements take up space</h2>
+
+        <p>By default (regardless of browser), HTML elements have different spatial qualities:</p>
+
+        <ul>
+          <li>block</li>
+          <li>inline</li>
+          <li>inline-block</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Block Elements</h2>
+
+        <ul>
+          <li>take up the entire width of a parent element</li>
+          <li>always begin on new lines</li>
+          <li>may contain other block or inline elements</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Examples of Block Elements</h2>
+
+        <ul>
+          <li><code>h1</code> - <code>h6</code></li>
+          <li><code>p</code></li>
+          <li><code>ul</code>, <code>ol</code> and <code>li</code></li>
+          <li>all HTML5 structural tags</li>
+          <li><code>div</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Inline Elements</h2>
+
+        <ul>
+          <li>occupy only the space bound by its tags</li>
+          <li>do not begin with a new line</li>
+          <li>may only contain other inline elements</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Examples of Inline Elements</h2>
+
+        <ul>
+          <li><code>em</code></li>
+          <li><code>strong</code></li>
+          <li><code>abbr</code></li>
+          <li><code>img</code></li>
+          <li><code>span</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Inline-Block Elements</h2>
+
+        <ul>
+          <li>no elements are inline-block by default</li>
+          <li>we must specify this property value using CSS</li>
+          <li>line an inline element...
+            <ul>
+              <li>does not begin with a new line</li>
+            </ul>
+          </li>
+          <li>...with some block properties
+            <ul>
+              <li>can take width, height, margin and padding properties</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Which is it?</h2>
+
+        <p>If you don't know offhand, check using Chrome Developer Tools. You can determine what an element is through the visual cue, or by checking the styles.</p>
+
+        <p>If an elements 'display' has not been overwritten using CSS, look for the <em>user agent stylesheet</em> value.</p>
+      </section>
+
+
+      <section>
+        <h2>Syntax</h2>
+
+        <p>We use the <code>display</code> property to change whether an element appears as a block, inline or inline-block element.</p>
+
+        <p><code>img { display: block; }</code></p>
+
+        <p>What if we don't want the element to display at all?</p>
+
+        <p><code>nav { display: none; }</code></p>
+      </section>
+
+    </main>
+  </body>
+</html>

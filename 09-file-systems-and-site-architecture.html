@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/base.css" rel="stylesheet">
+    <title>File Management &amp; Site Architecture</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>File Management &amp; Site Architecture</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>File Systems</h2>
+
+        <p>A typical operating system &mdash; all the instructions which make a computer run &mdash; includes <em>millions</em> of individual files.</p>
+
+        <p>How does a computer? human? keep the information organized?</p>
+      </section>
+
+
+      <section>
+        <h2>Flat File Systems</h2>
+
+        <p>Older computers used <em>flat file systems</em> in which every file had a different name stored in the same location.</p>
+
+        <p>This proved slow and ineffective because computers had to read the entire storage media to find a file it wanted to locate.</p>
+
+        <p>(Some older machines only had 4k (four-trillionths of a TB!) of storage to look through, so it may not have seemed like an issue then.)</p>
+      </section>
+
+
+      <section>
+        <h2>Hierarchical File Systems</h2>
+
+        <p>Modern computers rely on a <em>hierarchical file systems</em> which group similar files in a tree-like structure.</p>
+
+        <p>The system relies on the use of <em>drives</em> and <em>directories</em> to organize files.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Hierarchical File Tree</h2>
+
+        <p>Each block is a directory and presumably contains files.</p>
+
+        <img src="img/09-file-system-tree.svg" alt="File Tree" class="resized" />
+      </section>
+
+
+      <section>
+        <h2>How it 'looks'</h2>
+
+        <img src="img/09-file-system-tree-gui.png" alt="File Tree (GUI)" class="resized" />
+      </section>
+
+
+      <section>
+        <h2>Describing directory paths</h2>
+
+        <p><code>/</code> (root directory)</p>
+
+        <p><code>/bin</code></p>
+
+        <p><code>/usr/quorra</code></p>
+
+        <p><code>/usr/flynn/photos</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>/</code></h2>
+
+        <p>The <code>root</code> directory (indicated as a slash (<code>/</code>) ) is the top-most directory of a file system.</p>
+
+        <p>If we likened our system to a filing cabinet, <code>root</code> would be the cabinet itself, while the the directories would be the folders inside  .</p>
+      </section>
+
+      <section>
+        <h2>Current &amp; Previous Directories</h2>
+
+        <p>Sometimes we need to indicate a current or previous directory as we move around a file tree. Use shorthand indicators to denote these.</p>
+
+        <p><strong>Current Directory:</strong> <code>.</code></p>
+
+        <p><strong>Previous Directory:</strong> <code>..</code></p>
+      </section>
+
+
+      <section>
+        <h2>Absolute Paths</h2>
+
+        <ul>
+          <li>always start from the <code>root</code> directory</li>
+          <li>indicated by a slash (<code>/</code>) at the start of the path</li>
+        </ul>
+
+        <p><strong>Example:</strong> From any directory, we can access <code>photos</code> using: <code>/usr/flynn/photos</code></p>
+      </section>
+
+
+      <section>
+        <h2>Relative Paths</h2>
+
+        <ul>
+          <li>points to a directory, filename in your <em>current working directory</em></li>
+          <li>does not start with a slash (<code>/</code>) at the start of the path</li>
+          <li>utilizes previous directory shorthand</li>
+          <li>often used in programming due to portability</li>
+        </ul>
+
+        <p><strong>Example:</strong> Our working directory is: <code>/usr/flynn/photos</code>.</p>
+
+        <p>To get to <code>tmp</code>: <code>../../../tmp</code></p>
+      </section>
+
+
+      <section>
+        <h2>Naming Files</h2>
+
+        <p>Our computers are set up for ease-of-use. That leads users to develop sloppy habits when naming files and directories.</p>
+
+        <p>When programming, working with data or developing for the web, this can cause a number of avoidable problems.</p>
+
+        <p>Moving forward, incorporate the following conventions into your workflow. Doing so will aid in efficiency and help avoid bugs or other headaches when coding.</p>
+      </section>
+
+
+      <section>
+        <h2>File Naming Conventions</h2>
+
+        <ul>
+          <li>Avoid space characters</li>
+          <li>Avoid special characters (i.e. <code>?</code>, <code>%</code>, <code>#</code>, etc.)</li>
+          <li>Use lowercase letters</li>
+          <li>Use proper suffixes (i.e. <code>.html</code>, <code>.jpg</code>, <code>.js</code>, <code>.rb</code>)</li>
+          <li>Use descriptive filenames</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Avoid space characters</h2>
+
+        <ul>
+          <li><strong>DO NOT</strong> use spaces, tabs in filenames</li>
+          <li>Use hyphens (<code>-</code>), underscores ( <code>_</code> )</li>
+          <li>Hyphens are preferred by search engines</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Avoid special characters</h2>
+
+        <ul>
+          <li><strong>DO NOT</strong> use <code>?</code>, <code>%</code>, <code>#</code>, etc.</li>
+          <li>These are reserved by servers for special purposes</li>
+          <li>Stick to lowercase letters, numbers and periods</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Use lowercase letters</h2>
+
+        <ul>
+          <li>Writing filenames in lowercase is a widely accepted standard to ensure compatibility across systems</li>
+          <li>Servers are <em>case-sensitive</em></li>
+          <li><code>File.txt</code> and <code>file.txt</code> are not the same</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Use proper suffixes</h2>
+
+        <ul>
+          <li>Computers (and servers) rely on suffixes to determine which applications should be used to work with a file</li>
+          <li>Provide context for humans as to the type of file (i.e. text, graphic)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Use descriptive file names</h2>
+
+        <ul>
+          <li>Users should be able to read a file name and have a general idea of what its contents are</li>
+          <li>Aim to keep file names short, but never at the expense of context</li>
+        </ul>
+      </section>
+
+
+
+      <section>
+        <h2>What is it?</h2>
+
+        <p>A co-worker hands you a thumb drive with many files. Below are a few.</p>
+
+        <p>How should these be fixed? What do you think the files are?</p>
+
+        <ul>
+          <li><code>essay</code></li>
+          <li><code>My Data Set.xls</code></li>
+          <li><code>cute#photo.jpg</code></li>
+        </ul>
+
+        <p>Hard to tell, yes?</p>
+      </section>
+
+
+      <section>
+        <h2>Context is important</h2>
+
+        <p>Let's try this again:</p>
+
+        <ul>
+          <li>journalism-ethics-essay.txt</li>
+          <li>2015-marlins-batting-average.xls</li>
+          <li>my-cat-flynn.jpg</li>
+        </ul>
+
+        <p>We may still have to look at the file to gain more detail, but we have a better idea of the types of files and contents.</p>
+      </section>
+
+
+      <section>
+        <h2>Examples of naming conventions</h2>
+
+        <p>A few examples of how we used to identify image files at Fox Sports:</p>
+
+        <ul>
+          <li><code>140317-basketball-nba-heat-lebron-james-dunks.jpg</code></li>
+          <li><code>150412-hockey-nhl-panthers-nick-bjugstad.jpg</code></li>
+          <li><code>150618-baseball-mlb-marlins-jose-fernandez.jpg</code></li>
+        </ul>
+
+        <p>Convention:</p>
+
+        <ul>
+          <li>date (YYMMDD)</li>
+          <li>sport</li>
+          <li>league</li>
+          <li>team</li>
+          <li>player name / description</li>
+          <li>file extension</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Exercise</h2>
+
+        <img src="img/09-magic-kingdom.jpg" alt="Magic Kingdom" class="resized" />
+      </section>
+
+
+      <section>
+        <h2>Magic Kingdom Tree</h2>
+
+        <img src="img/09-magic-kingdom-tree.svg" alt="Magic Kingdom Tree" class="resized" />
+
+        <p>The Magic Kingdom utilizes a 'hub-and-spoke' model ... and you <em>can</em> travel from one land to another without going through the hub.</p>
+
+        <p>For purposes of this exercise, let's imagine cast members have cut off our land-to-land pathways. We always have to navigate through the hub.</p>
+      </section>
+
+
+      <section>
+        <h2>How do I get to...?</h2>
+
+        <p>Using <strong>absolute paths</strong>, let's plot our directions.</p>
+
+        <p>From Entrance to Tomorrowland:</p>
+
+        <p class="hidden"><code>/main-street/hub/tomorrowland</code></p>
+
+        <p>From Entrance to Adventureland:</p>
+
+        <p class="hidden"><code>/main-street/hub/adventureland</code></p>
+
+        <p>From Entrance to Fantasyland then to Frontierland:</p>
+
+        <p class="hidden"><code>/main-street/hub/fantasyland/../frontierland</code></p>
+      </section>
+
+
+      <section>
+        <h2>From one land to another</h2>
+
+        <p>What if we're already <em>inside</em> the park? Using <strong>relative paths</strong> is more efficient to describe our directions.</p>
+
+        <p>From Fantasyland to Frontierland:</p>
+
+        <p class="hidden"><code>../frontierland</code></p>
+
+        <p>From Tomorrowland to Liberty Square:</p>
+
+        <p class="hidden"><code>../liberty-square</code></p>
+
+        <p>From any land to Main Street:</p>
+
+        <p class="hidden"><code>../../</code></p>
+
+      </section>
+
+
+      <section>
+        <h2>Site Architecture</h2>
+
+        <p>As we build sites, the number of components (html files, css files, images, etc.) used can grow quickly.</p>
+
+        <p>We can utilize directories to keep our information organized.</p>
+
+        <p>Generally speaking:</p>
+
+        <ul>
+          <li><strong>Images</strong> should <em>always</em> belong in a directory called <code>images</code> or <code>img</code> (or something else reflecting the content)</li>
+          <li><strong>stylesheets</strong> should always be kept in a directory called <code>css</code> or <code>styles</code> (or, again, something else reflecting the content).</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>A Build-Up of Content</h2>
+
+        <p>If we built a site with different sections, we probably will not use individual <code>.html</code> in our root directory for long.</p>
+
+        <p>For instance:</p>
+
+        <ul>
+          <li><code>baseball.html</code></li>
+          <li><code>baseball-players.html</code></li>
+          <li><code>baseball-schedule.html</code></li>
+          <li><code>baseball-standings.html</code></li>
+          <li><code>baseball-teams.html</code></li>
+        </ul>
+
+        <p>What if required this system for all sports (basketball, football, hockey, soccer)?  And different leagues?  What if we want pages for each team? Each player? We might end up with hundreds or thousands of files in our root directory.</p>
+      </section>
+
+
+      <section>
+        <h2>Organizing Content</h2>
+
+        <p>Instead of keeping all files in the same directory, we can better organize our content.</p>
+
+        <ul>
+          <li><code>baseball/</code>
+            <ul>
+              <li><code>players/</code>
+                <ul>
+                  <li>(one page for each player)</li>
+                </ul>
+              </li>
+              <li><code>schedule.html</code></li>
+              <li><code>standings.html</code></li>
+              <li><code>teams/</code>
+                <ul>
+                  <li>(one page for each team)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Paths Are Multipurpose</h2>
+
+        <p>In addition to keeping a web site designer/developer organized, paths also provide context to a user.</p>
+
+        <p>The path to a file on a web site, always appears in the URL bar.</p>
+
+        <p><strong>Paths build our URLs!</strong></p>
+      </section>
+
+
+      <section>
+        <h2>Paths as URLs</h2>
+
+        <ul>
+          <li><code>baseball/</code>
+            <ul>
+              <li><code>players/</code>
+                <ul>
+                  <li><code>jose-fernandez.html</code></li>
+                </ul>
+              </li>
+              <li><code>schedule.html</code></li>
+              <li><code>standings.html</code></li>
+              <li><code>teams/</code>
+                <ul>
+                  <li><code>miami-marlins.html</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><code>http://www.my-site.com/baseball/players/jose-fernandez.html</code></p>
+
+        <p><code>http://www.my-site.com/baseball/schedule.html</code></p>
+
+        <p><code>http://www.my-site.com/baseball/standings.html</code></p>
+
+        <p><code>http://www.my-site.com/baseball/teams/miami-marlins.html</code></p>
+      </section>
+
+
+      <section>
+        <h2>Paths in HTML</h2>
+
+        <p>When we organize our site, we use paths within our HTML tags to indicate where our content is located.</p>
+
+        <p>When a file being requested is in the <strong>same directory</strong> as the file requesting it, we only need to specify the file name.</p>
+
+        <p>When a file being requested is in a <strong>subdirectory</strong>, we specify the forward path.</p>
+
+        <p>When the file being requested is in a <strong>higher directory</strong>, we must backtrack using the two dots (<code>..</code>) <strong>before</strong> specifying the forward path.</p>
+      </section>
+
+
+      <section>
+        <h2>Absolute or Relative?</h2>
+
+        <p>Both absolute and relative paths will work, however, it is best to use relative paths.</p>
+
+        <p>The problem with absolute paths is they can sometimes be <em>too</em> specific. When transferring files from one computer to another (such as uploading to a server), the path which exists on a user's computer is likely not the same as the server.</p>
+
+        <p>For instance:</p>
+
+        <ul>
+          <li><strong>user:</strong> <code>/Users/exb192/Sites/my-web-site/cats/index.html</code></li>
+          <li><strong>server:</strong> <code>/html/cats/index.html</code></li>
+        </ul>
+
+        <p>Servers are usually set up for each user to be working from a root directory. An example of what would be portable (if <code>html</code> is our root directory):</p>
+
+        <ul>
+          <li><strong>user:</strong> <code>cats/index.html</code></li>
+          <li><strong>server:</strong> <code>cats/index.html</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Examples of Paths in Use</h2>
+
+        <p><code>&lt;link href="../css/style.css" rel="stylesheet" /&gt;</code></p>
+
+        <p><code>&lt;img src="images/players/jose-fernandez.jpg" alt="Jose Fernandez" /></code></p>
+
+        <p><code>&lt;a href="teams/miami-marlins.html"&gt;Miami Marlins&lt;/a&gt;</code></p>
+
+        <p>These are examples which would work on both a user computer and server (assuming all files are uploaded properly).</p>
+      </section>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Basics</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      p.red { color: red; }
+
+      blockquote {
+        background: #eee;
+        padding: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Basics</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is CSS?</h2>
+
+        <ul>
+          <li>Cascading Style Sheets</li>
+          <li>Describe how an HTML document should be presented</li>
+          <li>Predominantly visual
+            <ul>
+              <li>colors</li>
+              <li>fonts</li>
+              <li>positioning (layout)</li>
+              <li>animation</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>And...</h2>
+
+        <p>We can also use CSS to design for:</p>
+
+        <ul>
+          <li>print</li>
+          <li>handheld devices</li>
+          <li>television</li>
+          <li>projectors</li>
+          <li>speech</li>
+          <li>braille</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>CSS History</h2>
+
+        <ul>
+          <li>Developed by H&aring;kon Wium Lee and Bert Bos in 1994</li>
+          <li>Improved upon the capabilities of the HTML 1.0 and the visually minded Mosaic</li>
+          <li>CSS1 adopted by Netscape, Internet Explorer in 1996</li>
+          <li>CSS2 introduced in 1998
+            <ul>
+              <li>But it was <em>very</em> buggy, so W3C created a working draft of CSS 2.1 in 2005</li>
+            </ul>
+          </li>
+          <li>Today: CSS3 is still a work in progress</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Using CSS: Inline Styles</h2>
+
+        <p>We can use the <code>style</code> attribute inside elements:</p>
+
+        <p><code>&lt;p style="color: red;"&gt;</code><span style="color: red;">This sentence is red text.</span><code>&lt;/p&gt;</code></p>
+
+        <p><strong>DO NOT DO THIS. BAD! BAD! BAD!</strong></p>
+      </section>
+
+
+      <section>
+        <h2>Using CSS: Internal Styles</h2>
+
+        <p>We can include a <code>&lt;style&gt;</code> tag inside the head of each HTML document.</p>
+
+        <pre><code>&lt;style&gt;<br/>&nbsp;&nbsp;p.red { color: red; }<br/>&lt;/style&gt;</code></pre>
+
+        <p class="red">This sentence is red.</p>
+
+        <p>Not so bad, but not very good either.</p>
+      </section>
+
+
+      <section>
+        <h2>Using CSS: External Style Sheets</h2>
+
+        <p>We can create a <code>.css</code> document which we can link to in our HTML document.</p>
+
+        <p><code>&lt;link href="css/style.css" rel="stylesheet" /&gt;</code></p>
+
+        <p>You may see the attribute/value of <code>type="text/css"</code> in some HTML documents. This is optional. Browsers defer to CSS as the default stylesheet language.</p>
+
+        <p>No tags are used in a <code>.css</code> document, just our CSS instructions.</p>
+
+        <p>(We're using an external style sheet to style this page.)</p>
+      </section>
+
+
+      <section>
+        <h2>Why are external stylesheets preferred?</h2>
+
+        <p>You maintain a web site of 100,000 pages. You decide to include:</p>
+
+        <ul>
+          <li>HTML presentational elements such as <code>&lt;b&gt;</code> or <code>&lt;hr/&gt;</code></li>
+          <li>Inline or internal styles which set your paragraphs in Helvetica and green.</li>
+        </ul>
+
+        <blockquote>
+          <p><strong>Your boss: </strong> <q>I hate Helvetica! I hate green!</q></p>
+          <pre>&gt;:(</pre>
+          <p><strong>You:</strong> :: gulp ::</p>
+          <pre>:'(</pre>
+        </blockquote>
+
+        <p>You now have to search through 100,000 pages to find these elements or styles and remove them.</p>
+
+        <p>There has to be a better way, right?</p>
+      </section>
+
+
+      <section>
+        <h2>What if you use an external style sheet?</h2>
+
+        <p><code>&lt;link href="css/style.css" rel="stylesheet" /&gt;</code></p>
+
+        <p>We can fix the problem with four lines of code.</p>
+
+        <pre><code>p {<br/>&nbsp;&nbsp;font-family: "Arial", sans-serif;<br/>&nbsp;&nbsp;color: black;<br/>}</code></pre>
+
+        <blockquote>
+          <p><strong>You, using external style sheets</strong>: <q>Yay!</q></p>
+          <pre>:)</pre>
+        </blockquote>
+      </section>
+    </main>
+
+  </body>
+</html>

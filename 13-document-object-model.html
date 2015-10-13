@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document Object Model</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Document Object Model</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Document Object Model (DOM)</h2>
+
+        <ul>
+          <li>A tree-like structure which helps us interact with HTML</li>
+          <li><em>Document:</em> Our <code>.html</code> file</li>
+          <li><em>Object:</em> HTML elements (also called <em>nodes</em>)</li>
+          <li><em>Model:</em> The structure we create using elements
+            <ul>
+              <li>nodes are nested</li>
+              <li>nodes are described <em>parents</em>, <em>children</em> and/or <em>siblings</em></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Visualizing the DOM</h2>
+
+        <p>In Chrome: View &raquo; Developer &raquo; Developer Tools</p>
+
+        <p>Make sure the elements tag is selected.</p>
+
+        <ul>
+          <li>Hover over code to see an element on the page</li>
+          <li>Use the magnifying glass to see the code</li>
+          <li>Clicking either shows you the DOM Path in the status bar</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Paths</h2>
+
+        <p><a href="dom-examples/dom-example-01.html">View Example</a></p>
+
+        <ul>
+          <li><code>html</code> &raquo; <code>head</code> &raquo; <code>title</code> &raquo; "My Web Site"</li>
+          <li><code>html</code> &raquo; <code>body</code> &raquo; <code>h1</code> &raquo; "Hello!"</li>
+          <li><code>html</code> &raquo; <code>body</code> &raquo; <code>p</code> &raquo; "Welcome to my web site."</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>In English...</h2>
+
+        <ul>
+          <li>"Find the text node in <code>html</code>, <code>head</code> and <code>title</code>."
+            <ul>
+              <li>"My Web Site"</li>
+            </ul>
+          </li>
+          <li>"Find the text node in <code>html</code>, <code>body</code> and <code>h1</code>."
+            <ul>
+              <li>"Hello!"</li>
+            </ul>
+          </li>
+          <li>"Find the text node in <code>html</code>, <code>body</code> and <code>p</code>."
+            <ul>
+              <li>"Welcome to my web site."</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>The HTML family tree</h2>
+
+        <h3><code>&lt;html&gt;</code></h3>
+
+        <ul>
+          <li>has no parents</li>
+          <li><code>head</code> and <code>body</code> are its children</li>
+          <li><code>head</code> is its first child</li>
+          <li><code>body</code> is its last child</li>
+        </ul>
+
+        <h3><code>&lt;head&gt;</code></h3>
+
+        <ul>
+          <li><code>body</code> is its sibling</li>
+          <li><code>title</code> is its child
+            <ul>
+              <li>the "text node" (or content) is "My Web Site"</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3><code>&lt;body&gt;</code></h3>
+
+        <ul>
+          <li>has one sibling and two children</li>
+          <li><code>head</code> is the sibling</li>
+          <li><code>h1</code> and <code>p</code> are its children
+            <ul>
+              <li><code>h1</code> is the first child</li>
+              <li><code>p</code> is the last child</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3><code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code></h3>
+
+        <ul>
+          <li>are siblings</li>
+          <li><code>h1</code> has one text node
+            <ul>
+              <li>"Hello!"</li>
+            </ul>
+          </li>
+          <li><code>p</code> has one text node
+            <ul>
+              <li>"Welcome to my web site."</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>The HTML family tree (revisited)</h2>
+
+        <p><a href="dom-examples/dom-example-02.html">View Example</a></p>
+
+        <p>If we only examine the <code>table</code> family...</p>
+
+        <h3><code>&lt;table&gt;</code></h3>
+
+        <ul>
+          <li>has two children</li>
+          <li><code>tr</code> and ... <code>tr</code> (twins?)
+            <ul>
+              <li>How do we tell them apart</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>A quick lesson</h2>
+
+        <p>In computer science parlance, an <em>array</em> (collection) of items will always start with the number zero (0).</p>
+
+        <p><code>array = [apple, banana, carrot]</code></p>
+
+        <ul>
+          <li><code>array[0]</code> is "apple"</li>
+          <li><code>array[1]</code> is "banana"</li>
+          <li><code>array[2]</code> is "carrot"</li>
+        </ul>
+
+        <p>This concept has been carried over to the DOM.</p>
+
+        <p>When there are two nodes with the same name, we can specify each individually by indicating the order in which they are in (0, 1, 2, n...).</p>
+
+      </section>
+
+      <section>
+        <h2>The HTML family tree (revisited, again)</h2>
+
+        <p>We can identify our <code>tr</code> siblings as follows:</p>
+
+        <ul>
+          <li><code>tr[0]</code> is the first table row</li>
+          <li><code>tr[1]</code> is the second &mdash; in this case, last &mdash; table row</li>
+        </ul>
+
+        <p>Remember, this is just how we <em>describe</em> the path. We never type the <code>[n]</code> in HTML. We (may but) rarely use it in CSS and/or Javascript.</p>
+
+        <ul>
+          <li>Each <code>tr</code> has two children
+            <ul>
+              <li><code>tr[0]</code> has two children
+                <ul>
+                  <li><code>th[0]</code></li>
+                  <li><code>th[1]</code></li>
+                </ul>
+              </li>
+              <li><code>tr[1]</code> also has two children
+                <ul>
+                  <li><code>td[0]</code></li>
+                  <li><code>td[1]</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Paths</h2>
+
+        <ul>
+          <li><code>table</code> &raquo; <code>tr[0]</code> &raquo; <code>th[0]</code> &raquo; "City"</li>
+          <li><code>table</code> &raquo; <code>tr[0]</code> &raquo; <code>th[1]</code> &raquo; "State"</li>
+          <li><code>table</code> &raquo; <code>tr[1]</code> &raquo; <code>th[0]</code> &raquo; "Coral Gables"</li>
+          <li><code>table</code> &raquo; <code>tr[1]</code> &raquo; <code>th[1]</code> &raquo; "Florida"</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>In plain words</h2>
+
+        <p><code>table</code> &raquo; <code>tr[0]</code> &raquo; <code>th[0]</code> &raquo; "City"</p>
+
+        <ul>
+          <li>"<code>table</code> is the parent element."</li>
+          <li>"<code>tr[0]</code> is the first child of <code>table</code>."</li>
+          <li>"<code>th[0]</code> is the first child of <code>tr[0]</code>."</li>
+          <li>"'City' is the text node."</li>
+          <li>"Find the content in <code>table</code>, the first <code>tr</code> and the first <code>th</code>."</li>
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>

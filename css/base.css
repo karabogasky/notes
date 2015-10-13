@@ -53,6 +53,10 @@ table, td {
   padding: 0.5em;
 }
 
+code > span {
+  color: #999;
+}
+
 #retrospective ol li {
   font-size: 24px;
   margin-bottom: 1em;
@@ -104,6 +108,15 @@ table, td {
 .resized {
   margin: 0 auto;
   width: 100%;
+}
+
+.hidden {
+  color: #eee;
+  background: #eee;
+}
+
+.hidden:hover {
+  color: #222;
 }
 
 
