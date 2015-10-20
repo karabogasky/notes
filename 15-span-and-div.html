@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>span &amp; div</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1><code>span</code> &amp; <code>div</code></h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Generic Elements</h2>
+
+        <p>Up to this point, we've talked about HTML tags having <strong>meaning</strong>.</p>
+
+        <p>Whenever you <em>can</em> use a tag with meaning, you <em>should</em>.</p>
+
+        <p>Sometimes, though, we need to use elements for the sole purpose of implementing a style within a design. For this we use <code>span</code> and <code>div</code>.</p>
+      </section>
+
+
+      <section>
+        <h2><code>span</code></h2>
+
+        <ul>
+          <li>a generic <em>inline</em> container</li>
+          <li>can be used with <code>id</code> and <code>class</code> attributes</li>
+          <li><strong>should only be used when no semantic element is appropriate</strong></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Examples of <code>span</code></h2>
+
+        <h3>Bad</h3>
+
+        <p><code>&lt;p&gt;We code in &lt;span&gt;HTML&lt;/span&gt;&lt;/p&gt;</code></p>
+
+        <p><small><strong>Why?</strong> Because we could use <code>abbr</code> instead.</small></p>
+
+        <h3>Good</h3>
+
+        <p><code>&lt;p&gt;This is &lt;span class="red"&gt;red text&lt;/span&gt;&lt;/p&gt;</code>
+      </section>
+
+
+      <section>
+        <h2><code>div</code></h2>
+
+        <ul>
+          <li>a generic <em>block</em> container</li>
+          <li>can be used with <code>id</code> and <code>class</code> attributes</li>
+          <li><strong>should only be used when no semantic element is appropriate</strong></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Examples of <code>div</code></h2>
+
+        <h3>Bad</h3>
+
+        <p><code>&lt;div&gt;This is a sentence in a paragraph.&lt;/div&gt;</code></p>
+
+        <p><small><strong>Why?</strong> We should be using a <code>p</code> instead.</small></p>
+
+        <h3>Good</h3>
+
+        <pre>
+&lt;div class="container"&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Erin's Web Site&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;p&gt;Hello! Welcome to my page&lt;/p&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2>Reminder</h2>
+
+        <p>Always aim to use a proper semantic tag before resorting to use of a <code>span</code> or <code>div</code>.</p>
+
+        <p>Only use <code>span</code> and <code>div</code> after creating a well-structured document, when it is clear additional elements are needed for styling purposes.</p>
+      </section>
+
+    </main>
+  </body>
+</html>
