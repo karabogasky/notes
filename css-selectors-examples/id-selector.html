@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS: ID Selector</title>
+    <style>
+    /* Use of an internal style is for demonstration purposes only.
+       Use external style sheets in your own code. */
+
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 16px;
+      color: #222; /* dark gray */
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      color: #4D912C; /* green */
+    }
+
+    #content {
+      border: 1px solid #222;
+      /* illustrates shorthand for creating a border:
+         border-width, border-style, border-color */
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>ID Selector</h1>
+
+    <section id="content">
+
+      <p>In this example, we have changed the font family Helvetica (with Arial or a generic sans-serif font as a backup). The base font size is set at 16 pixels. The font color is a dark gray.</p>
+
+      <p>We have adjusted the font size for our <code>h1</code> to 32 pixels.</p>
+
+      <p>We have changed the font color of <code>p</code> to green.</p>
+
+      <p>Notice by using creating type selectors for <code>h1</code> and <code>p</code>, we are overriding the styles set in <code>body</code>.</p>
+    </section>
+
+    <section>
+      <p>We have also created two sections in this document. The first has an <code>id</code> of <code>content</code>.</p>
+
+      <p>We applied a 1 pixel, solid border in dark gray.</p>
+
+      <p>This section has no <code>id</code>, therefore it has no border.</p>
+    </section>
+    
+  </body>
+</html>

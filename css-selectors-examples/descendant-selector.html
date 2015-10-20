@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Descendant Selector</title>
+    <style>
+    /* Use of an internal style is for demonstration purposes only.
+       Use external style sheets in your own code. */
+
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 16px;
+      color: #222; /* dark gray */
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    section code {
+      color: #DE935F; /* orange */
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Descendant Selector</h1>
+
+    <section>
+
+      <p>In this example, we have changed the font family Helvetica (with Arial or a generic sans-serif font as a backup). The base font size is set at 16 pixels. The font color is a dark gray.</p>
+
+      <p>We have adjusted the font size of <code>&lt;h1&gt;</code> to 32 pixels.</p>
+
+    </section>
+
+    <section>
+      <p>We have also created two sections in this document. These are marked up by <code>&lt;section&gt;</code>.</p>
+
+      <p>We applied a declaration saying any <code>&lt;code&gt;</code> tag which is a descendant of <code>&lt;section&gt;</code> should be orange.</p>
+
+      <p>Note that it does not matter <code>&lt;code&gt;</code> is also nested within <code>&lt;p&gt;</code> tags.</p>
+    </section>
+  </body>
+</html>

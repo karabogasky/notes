@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS: Child Selector</title>
+    <style>
+    /* Use of an internal style is for demonstration purposes only.
+       Use external style sheets in your own code. */
+
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 16px;
+      color: #222; /* dark gray */
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    li > a {
+      color: #DE935F; /* orange */
+      text-decoration: none;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Child Selector</h1>
+
+    <p>In this example, we have changed the font family Helvetica (with Arial or a generic sans-serif font as a backup). The base font size is set at 16 pixels. The font color is a dark gray.</p>
+
+    <p>We have adjusted the font size for our <code>h1</code> to 32 pixels.</p>
+
+    <p>Notice by using creating a type selector for <code>h1</code>, we are overriding the styles set in <code>body</code>.</p>
+
+    <ul>
+      <li><a href="http://apple.com/">Apple</a></li>
+      <li><a href="http://microsoft.com">Microsoft</a></li>
+    </ul>
+
+    <p>Notice the links inside the list items of our unordered list have changed to orange and do not have an underline.</p>
+
+    <p>If we create a <a href="http://google.com/">link</a> outside of an <code>li</code> tag, the style is not applied.</p>
+  </body>
+</html>

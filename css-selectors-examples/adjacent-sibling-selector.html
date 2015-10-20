@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adjacent Sibling Selector</title>
+    <style>
+    /* Use of an internal style is for demonstration purposes only.
+       Use external style sheets in your own code. */
+
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-size: 16px;
+      color: #222; /* dark gray */
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h1 + p {
+      font-weight: bold;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Adjacent Sibling Selector</h1>
+
+    <p>In this example, this first paragraph should be bold.</p>
+
+    <p>But the second one should not be.</p>
+
+    <p>The first paragraph is an 'adjacent sibling' of h1.</p>
+  </body>
+</html>
