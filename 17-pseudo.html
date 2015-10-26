@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pseudo-Elements &amp; Pseduo-Classes</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Pseudo-Elements &amp; Pseudo-Classes</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Pseudo-Elements</h2>
+
+        <p>A <em>pseudo-element</em> is an add-on for CSS selectors which lets you style specific parts of an element.</p>
+
+        <ul>
+          <li><code>:before</code></li>
+          <li><code>:after</code></li>
+          <li><code>:first-letter</code></li>
+          <li><code>:first-line</code></li>
+        </ul>
+
+        <p><small>Pseudo-elements can be found listed among properties in the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN: CSS Reference</a>.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Pseudo-Elements in use</h2>
+
+        <p>Remember how I preached ornamental items could be handled through CSS?</p>
+
+        <p>If you wanted to place a bullet before each paragraph...</p>
+
+        <pre>p:before {
+  content: "\00a4";
+}</pre>
+
+        <p>Will make your content look like:</p>
+
+        <p>&#164; This!</p>
+
+        <p>&#164; Pretty cool, eh?</p>
+      </section>
+
+
+      <section>
+        <h2>A note about glyphs in CSS</h2>
+
+        <p>If we want to use glyphs in CSS, we cannot use its HTML entity. It needs to be converted to a 'hex' (base 16) value.</p>
+
+        <p>The easiest way to do this is to look up the entity number and convert it using the <a href="http://www.evotech.net/articles/testjsentities.html">Entity Conversion Calculator</a>.</p>
+
+        <p>(Some entity references may include the hex value.)</p>
+      </section>
+
+
+      <section>
+        <h2>Pseudo-Classes</h2>
+
+        <p>A <em>pseudo-class</em> is an add-ons for CSS selectors which lets you style the <em>state</em> of an element.</p>
+
+        <ul>
+          <li><code>:focus</code></li>
+          <li><code>:hover</code></li>
+          <li><code>:visited</code></li>
+          <li><code>:first-child</code></li>
+          <li><code>:nth-child</code></li>
+          <li><code>:last-child</code></li>
+        </ul>
+
+        <p><small>Pseudo-classes can be found listed among properties in the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN: CSS Reference</a>.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Pseudo-classes in action</h2>
+
+        <p>A link has many states. It can be inactive, hovered over, active (clicked) or visited.</p>
+
+        <p>If we wanted to change the hover state, our code would look like this:</p>
+
+        <pre>a {
+  color: rgb(34,124,238); <span>/* blue */</span>
+}
+
+a:hover {
+  color: rgb(215,83,46); <span>/* red */</span>
+}
+</pre>
+
+        <p>Our <a href="#">LINK</a> would appear as so.</p>
+
+        <p>When we want to apply a change to an element's state, we always want to set a style for the default state. In this case, the links which have not been visited are blue and lack an underline.</p>
+      </section>
+
+
+    </main>
+  </body>
+</html>

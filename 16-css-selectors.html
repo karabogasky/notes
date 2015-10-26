@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Selectors</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Universal Selector</h2>
+
+        <p><code>* { color: red; }</code></p>
+
+        <ul>
+          <li>Applies to all elements in a document</li>
+          <li>In this case, we are changing the color of all the content (text) to red</li>
+        </ul>
+
+        <p><a href="css-selectors-examples/universal-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>Type Selector</h2>
+
+        <p><code>p { color: red; }</code></p>
+
+        <ul>
+          <li>Matches elements</li>
+          <li>We're changing all content within <code>&lt;p&gt;</code> to red</li>
+        </ul>
+
+        <p>We can also group elements into one CSS block:</p>
+
+        <p><code>h1, h2, h3, h4, h5, h6 { color: red; }</code></p>
+
+        <p><a href="css-selectors-examples/type-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>Class Selector</h2>
+
+        <p><code>.red-text { color: red; }</code></p>
+
+        <p><code>p.red-text { font-family: sans-serif; }</code></p>
+
+        <ul>
+          <li>Matches any element with the specific class value</li>
+          <li>It can also be applied to an element with the class value attached</li>
+          <li>In the second example, only <code>&lt;p class="red-text"&gt;</code> will be impacted</li>
+        </ul>
+
+        <p><a href="css-selectors-examples/class-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>ID Selector</h2>
+
+        <p><code>#flynn { border-width: 1px; }</code></p>
+
+        <ul>
+          <li>Matches any element with the specific id value</li>
+          <li>It can also be applied to an element with the id value attached, but...
+            <ul>
+              <li>Theoretically, this is unnecessary since <code>id</code> is unique</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><a href="css-selectors-examples/id-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>Child Selector</h2>
+
+        <p><code>li &gt; a { text-decoration: none; }</code></p>
+
+        <ul>
+          <li>Matches an element which is a child of the preceding element</li>
+          <li>In this case, if <code>&lt;a&gt;</code> is a child of <code>&lt;li&gt;</code> the default underline applied to links is removed</li>
+        </ul>
+
+        <p><a href="css-selectors-examples/child-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>Descendant Selector</h2>
+
+        <p><code>section a { text-decoration: none; }</code></p>
+
+        <ul>
+          <li>Matches an element which is a descendent of the parent element</li>
+          <li>It <em>does not</em> have to be a direct child</li>
+          <li>In this case, we're removing the default underline applied to links from any <code>&lt;a&gt;</code> element nested within a <code>&lt;section&gt;</code> (regardless of whether the <code>&lt;a&gt;</code> is nested in a <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code>, etc.)
+        </ul>
+
+        <p><a href="css-selectors-examples/descendant-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>Adjacent Sibling Selector</h2>
+
+        <p><code>h1 + p { font-weight: bold; }</code></p>
+
+        <ul>
+          <li>Matches the element which is next to its sibling</li>
+          <li>In this example, we find <code>&lt;h1&gt;</code> and change its first sibling, <code>&lt;p&gt;</code> to bold.</li>
+          <li>No other <code>&lt;p&gt;</code> elements will be impacted by this declaration</li>
+        </ul>
+
+        <p><a href="css-selectors-examples/adjacent-sibling-selector.html">View Example</a></p>
+      </section>
+
+      <section>
+        <h2>General Sibling Selector</h2>
+
+        <p><code>h1 ~ p { color: red; }</code></p>
+
+        <ul>
+          <li>Matches an element which is a sibling</li>
+          <li>The sibling <em>does not</em> need to be directly following</li>
+          <li>So, if you had siblings <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;p&gt;</code>, the text of the two <code>&lt;p&gt;</code> elements would be red.</li>
+        </ul>
+
+        <p><a href="css-selectors-examples/general-sibling-selector.html">View Example</a></p>
+      </section>
+
+    </main>
+  </body>
+</html>
