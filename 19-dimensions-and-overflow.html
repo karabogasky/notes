@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dimensions &amp; Overflow</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Dimensions &amp; Overflow</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Sizing Boxes</h2>
+
+        <p>As we have seen with the block elements and the box model, content will take up whatever room we give it... unless we specify otherwise.</p>
+
+        <p>When we want to create layouts, we can apply constraints:</p>
+
+        <ul>
+          <li>width</li>
+          <li>height</li>
+          <li>overflow</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Dimensions</h2>
+
+        <p><em>Width</em> is often helpful for layout and design since we are often limited (horizontally) by screen size.</p>
+
+        <p>We can specify <em>height</em> but it really is not necessary since vertical scrolling is an accepted practice when using a web interface.</p>
+
+        <ul>
+          <li><code>width</code></li>
+          <li><code>max-width</code></li>
+          <li><code>min-width</code></li>
+          <li><code>height</code></li>
+          <li><code>max-height</code></li>
+          <li><code>min-height</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Overflow</h2>
+
+        <p>What happens if we have content which is greater in size than the box we've provided for it?</p>
+
+        <p>We can use the <em>overflow</em> property, which handles how that content is displayed within its parent element.</p>
+
+        <ul>
+          <li><code>visible</code></li>
+          <li><code>hidden</code></li>
+          <li><code>scroll</code></li>
+          <li><code>auto</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><code>visible</code></h2>
+
+        <p>The <code>visible</code> value breaks the box's dimensions.</p>
+
+        <p><a href="box-model-examples/overflow-visible.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>hidden</code></h2>
+
+        <p>The <code>hidden</code> value hides the content which would normally extend beyond the box's dimensions.</p>
+
+        <p><a href="box-model-examples/overflow-hidden.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>scroll</code></h2>
+
+        <p>The <code>scroll</code> value adds vertical and horizontal scroll bars to the containing box.</p>
+
+        <p>If the content is flexible (horizontally) within containing box, only vertical scroll bars will be added.</p>
+
+        <p><a href="box-model-examples/overflow-scroll.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>auto</code></h2>
+
+        <p>The <code>auto</code> adds vertical and/or horizontal scroll bars <em>if necessary</em>.</p>
+
+        <p><a href="box-model-examples/overflow-auto.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2>A new discovery?</h2>
+
+        <p>As you saw from the examples, it seems <code>scroll</code> and <code>auto</code> work similarly: The browser will determine whether scrollbars are needed.</p>
+
+        <p>Keep in mind different browsers, operating systems may treat these differently than what you see here. Understand how the spec works so you make the right choice for your design and browser compatibility.</p>
+      </section>
+
+    </main>
+  </body>
+</html>

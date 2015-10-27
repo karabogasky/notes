@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box Model Example</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-size: 16px;
+        color: #222;
+      }
+
+      div {
+        width: 600px;
+        padding: 20px;
+        border: 5px solid #ccc;
+        margin: 30px;
+      }
+
+      h1, p {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+
+      .content {
+        color: rgb(121,165,176);
+      }
+
+      .padding {
+        color: rgb(182,217,167);
+      }
+
+      .border {
+        color: rgb(255,236,171);
+      }
+
+      .margin {
+        color: rgb(248,194,136);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Box Model Example</h1>
+
+      <p>If you open up Chrome Dev Tools, you can see how the box model works using this page as an example.</p>
+
+      <p>In Dev tools, <span class="content">content appears in blue</span>; <span class="padding">padding appears in green</span>; <span class="border">border appears in yellow</span> (although you should be able to see the border since a width must be specified); and <span class="margin">margin appears in orange</span>.</p>
+
+      <p>The content is variable in size. The <code>div</code> should have 20 pixels of padding on each side, a 5-pixel gray border on each side and a 30-pixel margin on each side.</p>
+    </div>
+  </body>
+</html>

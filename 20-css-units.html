@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS: Units of Measurement</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS: Units of Measurement</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Choices, choices...</h2>
+
+        <p>What units of measurement do we use when specifying box model, width, height, etc. properties?</p>
+
+        <p>We utilize <em>screen</em> units, including:</p>
+
+        <ul>
+          <li>pixels (<code>px</code>)</li>
+          <li>percentage (<code>%</code>)</li>
+          <li>ems (<code>em</code>)</li>
+          <li>root ems (<code>rem</code>)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>The Web is Not Print</h2>
+
+        <p>When you design for print, you may use the following units of measurement:</p>
+
+        <ul>
+          <li>points</li>
+          <li>picas</li>
+          <li>inches</li>
+          <li>centimeters</li>
+          <li>millimeters</li>
+        </ul>
+
+        <p><strong>DO NOT</strong> use print units when designing for digital media. Use screen units.</p>
+
+        <p><small>One exception: Print style sheets.</small></p>
+
+      </section>
+
+
+      <section>
+        <h2>Pixels</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>allows for very precise control of design</li>
+          <li>what you see is what you get (WYSIWYG)</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>poor choice for fluid, responsive design</li>
+          <li>not ideal for resizing text, designs</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>font-size: 30px;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Relative Units</h2>
+
+        <p>Percentage, ems and rems are <em>relative</em> units.</p>
+
+        <p>These values are based on a pixel measurement set within the browser's default preferences or at the <code>html</code> or <code>body</code> level.</p>
+
+        <p>Elements will then adjust their measurement relative to that initial value.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Percentage</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>Most HTML default values are percentage based
+            <ul>
+              <li><code>h1</code> is 200% of the default font size</li>
+              <li>block elements take up 100% of the parent element's width</li>
+            </ul>
+          </li>
+          <li>great for fluid, responsive design</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation based on parent font size</li>
+          <li>very precise calculations can disrupt layout</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>width: 90%;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Ems</h2>
+
+        <p>Ems are a typographic measurement which reference the width of the capital "M" in a typeface being used.</p>
+
+        <p><small>It is not in any way related to <code>&lt;em&gt;</code>.</small></p>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>great for fluid, responsive design</li>
+          <li>once a base font is set, everything can be relative (to the parent)</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation based on parent font size</li>
+          <li>very precise calculations can disrupt layout</li>
+          <li>inherits a parent's property</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>margin: 2em; <span>/* 32px, if base font is 16px */</span></code></p>
+      </section>
+
+
+      <section>
+        <h2>Root Ems</h2>
+
+        <p>Root ems (<code>rem</code>) were introduced in CSS3.</p>
+
+        <p>They are like ems, but relative to the root (<code>html</code>) element, not a parent element.</p>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>a little more predictable than <em>percentage</em> or <em>ems</em></li>
+          <li>great for fluid, responsive design</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation</li>
+          <li>can still result in precise, layout-disrupting calculations</li>
+          <li>older browsers (IE 8 or less, Opera Mini) lack support</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>font-size: 1.25rem; <span>/* 20px if base font is 16px */</span></code></p>
+      </section>
+
+    </main>
+  </body>
+</html>
