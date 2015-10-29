@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Layouts</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Layout</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>User-Friendly Design</h2>
+
+        <p>Studies show users are most comfortable when reading a page with 60-70 characters across.</p>
+
+        <p>Based on that logic (and a practice inherited from designing to standard monitor sizes), we try not to expand a container beyond <strong>960 pixels</strong>.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Middle Ground</h2>
+
+        <p>Designing for a container 960 pixels wide also gives us a good starting point for any digital design.</p>
+
+        <p>Consider:</p>
+
+        <ul>
+          <li>One of the largest monitors available today (Apple 30" Cinema Display) has a display width of 2560 pixels.</li>
+          <li>One of the smallest mobile devices available today (iPhone) has a display width of 320 pixels.</li>
+        </ul>
+
+        <p>Assuming a design is <em>not responsive</em>, it is still possible to look good on both these extremes.</p>
+      </section>
+
+
+      <section>
+        <h2>Stretching the Limits</h2>
+
+        <p>There is nothing wrong with designing for bigger screens. Remember to maintain usability through responsive design.</p>
+
+        <ul>
+          <li>never stretch readable content beyond the 60-70 character limit</li>
+          <li>bigger monitor, bigger fonts</li>
+          <li>scale down for smaller screens</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>A Teeny Proof</h2>
+
+        <p>Again, why 960?</p>
+
+        <p>960 / 16 = ?</p>
+
+        <p>:}</p>
+
+      </section>
+
+
+      <section>
+        <h2>A centered layout</h2>
+
+        <p>One of the easiest layouts in web design is to take well-structured content, place it in a container and center the container.</p>
+
+        <p>You need two components to create a simple, centered layout:</p>
+
+        <ol>
+          <li>A <code>div</code> wrapping your content in your HTML file</li>
+          <li>CSS declarations on the <code>div</code> specifying <code>width</code> and setting the left and right <code>margin</code> to <code>auto</code>.</li>
+        </ol>
+
+        <p><a href="simple-layouts/centered.html">View Example</a></p>
+
+      </section>
+
+
+      <section>
+        <h2>Working with <code>max-width</code></h2>
+
+        <p>What if we wanted our centered container's content to adjust as it became smaller? (Maybe someone is viewing the site on a phone or tablet.)</p>
+
+        <p>When we use the <code>max-width</code> property, we're telling the browser to not let our content stretch beyond the value specified.</p>
+
+        <p>This provides us with flexibility to set space for our content in a design, but also make it elastic if the viewport is smaller than the allotted space.</p>
+
+        <p><a href="simple-layouts/max-width.html">View Example</a></p>
+
+      </section>
+
+
+      <section>
+        <h2>Working with <code>min-width</code></h2>
+
+        <p>Some browsers (Firefox) will crush a block element without mercy.</p>
+
+        <p>What if our design called for flexibility, but not at the total expense of our content?</p>
+
+        <p>Using <code>min-width</code> will limit how much an element can be re-sized.</p>
+
+
+        <p><a href="simple-layouts/min-width.html">View Example</a></p>
+      </section>
+
+    </main>
+  </body>
+</html>

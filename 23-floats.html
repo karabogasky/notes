@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floats</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Floats</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Floating Elements</h2>
+
+        <p>The <code>float</code> property allows us to wrap text around images and/or other elements.</p>
+
+        <p>The property accepts three values:</p>
+
+        <ul>
+          <li>left</li>
+          <li>right</li>
+          <li>none</li>
+        </ul>
+
+        <p>When an element is floated, it acts as a block element.</p>
+
+        <p><a href="float-examples/float.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2>Clearing Floats</h2>
+
+        <p>Remember how we talked about CSS 2.0 being weird and buggy? Clearing floats is a good example of how web developers had to hack code to get a design right.</p>
+
+        <p>There are a few solutions, all of which may work in different situations.</p>
+
+        <p>Try what works in your design. If it does, stick with it.</p>
+      </section>
+
+
+      <section>
+        <h2><code>clear</code> property</h2>
+
+        <p>Sometimes we need content within the normal flow to appear <em>after</em> a floated element, as if the content were starting on a new line or a beginning a section.</p>
+
+        <p>To end a float and re-establish the normal flow, we use the <code>clear</code> property.</p>
+
+        <p>If we're trying to move past:</p>
+
+        <ul>
+          <li>left-floated elements, use <code>clear: left;</code></li>
+          <li>right-floated elements, use <code>clear: right;</code></li>
+          <li>left- and/or right-floated elements, use <code>clear: both;</code></li>
+        </ul>
+
+        <p><a href="float-examples/clearing-floats-clear-01.html">View example 1</a></p>
+        <p><a href="float-examples/clearing-floats-clear-02.html">View example 2</a></p>
+
+        <p>The <code>clear</code> property also takes the value <code>none</code>.</p>
+
+      </section>
+
+
+      <section>
+        <h2><code>:after</code> pseudo-class</h2>
+
+        <p>If the floated elements are contained (inside a parent element), apply the following declarations using the <code>:after</code> pseudo-class on the parent element.</p>
+
+        <p>For example:</p>
+
+        <pre>section:after {
+  content: "";
+  display: block;
+  clear: both;
+}</pre>
+
+        <p><a href="float-examples/clearing-floats-after.html">View example</a></p>
+
+      </section>
+
+
+      <section>
+        <h2><code>.clearfix</code> class</h2>
+
+        <p>Another popular way of clearing a float is to enclose the floated element within a container and add a <code>clearfix</code> class to the parent (the container) of the floated element in HTML.</p>
+
+        <pre>.clearfix {
+  overflow: auto;
+  zoom: 1;
+}</pre>
+
+        <p>Because <code>clearfix</code> is a class, it can be used multiple times in our HTML file.</p>
+
+        <p>This is a pretty standard "hack" which still works in older browsers.</p>
+
+        <p>It's not the nicest solution, but sometimes you go with what works.</p>
+
+        <p><a href="float-examples/clearing-floats-clearfix.html">View example</a></p>
+      </section>
+
+    </main>
+  </body>
+</html>

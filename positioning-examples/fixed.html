@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fixed positioning</title>
+    <style>
+      #red-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        /* Why bottom and right?
+
+           We know our grid begins in the top, left [0,0], but the
+           width of our viewport can vary based on device. We
+           essentially 'flip' the grid horizontally and vertically,
+           and work upside-down from the bottom right. */
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Fixed positioning</h1>
+
+    <div id="red-box"></div>
+    <div id="green-box"></div>
+    <div id="blue-box"></div>
+
+    <p>We can position an element in relation to our viewport (our browser window).</p>
+
+    <p>The red and blue boxes are static and appear in their normal flow.</p>
+
+    <p>The green box is set in a fixed position, 20 pixels from the bottom and 20 pixels from the right of the browser window.</p>
+
+  </body>
+</html>

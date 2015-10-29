@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ems in Action</title>
+    <style>
+      /*
+       * Use of an internal style is for demonstration purposes only.
+       * Use external style sheets in your own code.
+       */
+
+      body {
+        font-size: 16px;
+      }
+
+      aside {
+        font-size: 0.5em; /* 8px */
+      }
+
+      strong {
+        font-size: 0.5em; /* 4px */
+        font-weight: normal;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Ems in Action</h1>
+    </header>
+
+    <main>
+      <section>
+        <p>We have set the base font of our body to 16 pixels.</p>
+
+        <aside>
+          <p>Here is an aside. We have set the font size of the aside to 0.5em.</p>
+
+          <p><strong>We have also set the font size of <code>&lt;strong&gt;</code> to 0.5em.</strong></p>
+        </aside>
+
+        <p><strong>This is code outside the aside.</strong></p>
+      </section>
+
+      <section>
+        <p>Notice how the font size cascades when we use ems.</p>
+
+        <p>The text within <code>&lt;aside&gt;</code> is equivalent to 8 pixels.</p>
+
+        <p>The text within <code>&lt;strong&gt;</code> which is nested within <code>&lt;aside&gt;</code> is equivalent to 4 pixels.</p>
+      </section>
+    </main>
+  </body>
+</html>

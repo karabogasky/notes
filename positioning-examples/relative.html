@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relative positioning</title>
+    <style>
+    #red-box,
+    #green-box,
+    #blue-box {
+      /* Because we have no content, we're defining the width,
+         height of our boxes. */
+      width: 100px;
+      height: 100px;
+    }
+
+    #red-box {
+      background: rgb(248,0,0);
+    }
+
+    #green-box {
+      background: rgb(0,248,0);
+      /* #green-box is relatively positioned to #red-box. */
+      position: relative;
+      /* Because both are block elements, #green-box, by default is
+         pushed to a new line, or point [100,0] on our "grid." We
+         can move it up with a negative 'top' value, and move it
+         left by offsetting it with a positive value. The element
+         begins at the grid location [50,50].
+
+         What if #red-box and #green-box had a display value of
+         inline-block? How would that require an adjustment to
+         get the boxes to look as they do with the current setting?
+
+      */
+      top: -50px;
+      left: 50px;
+    }
+
+    #blue-box {
+      background: rgb(0,0,248);
+      position: relative;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Relative positioning</h1>
+
+    <div id="red-box"></div>
+    <div id="green-box"></div>
+    <div id="blue-box"></div>
+
+    <p>We can position an element relative to its normal position.</p>
+
+    <p>The red box is static.</p>
+
+    <p>We have relatively positioned the green box. Its x-axis is offset by <code>left: 50px;</code> (which moves it left to right) and y-axis by <code>top: -50px;</code> (which moves it from bottom to top).</p>
+
+    <p>We have also relatively positioned the blue box. Because we gave it no x- or y-axis property values, the blue box acts as if it were static.</p>
+  </body>
+</html>

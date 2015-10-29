@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Static positioning</title>
+    <style>
+      #red-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our boxes. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Static positioning</h1>
+
+    <div id="red-box"></div>
+    <div id="green-box"></div>
+    <div id="blue-box"></div>
+
+    <p>Static is the default value for every element.</p>
+
+    <p>The boxes above do not have any <code>position</code> value applied. They are static.</p>
+
+  </body>
+</html>

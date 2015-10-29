@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Centered Content</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        line-height: 1.5;
+      }
+
+      #container {
+        width: 600px;
+        margin: 0 auto 0 auto; /* top, right, bottom, left */
+
+        /* We could also write this as:
+
+           margin: 0 auto;
+
+           Because div is a block element, it will take up the entire
+           width of our browser window. We can specify width, then
+           set margins on the left, and right side to automatically
+           adjust the margin as needed.
+        */
+      }
+
+      main > p:first-child {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1em;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+    <!-- Because div is a generic element, it is perfect to use as a
+         'container' - - we're not describing any content, and yet
+         we can apply styles to it. -->
+
+      <header>
+        <h1>Centered Content</h1>
+      </header>
+
+      <main>
+        <p><em>Drag the right edge of your browser window as far left as possible. The box will stay centered as the window collapses.</em></p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra, ante nec pharetra pulvinar, neque augue tempus nisl, ac consequat elit arcu nec dolor. Donec auctor erat id sollicitudin rutrum. Praesent lobortis fringilla enim mattis egestas. Etiam ex ante, pretium in ligula et, accumsan vehicula dolor. Vestibulum dignissim ultricies urna quis viverra. Suspendisse scelerisque velit sed luctus volutpat. Donec eget tortor in odio lacinia euismod eu a augue. Vivamus vitae condimentum mi. Sed hendrerit, nulla non mollis rhoncus, sem mi mattis risus, vel placerat lorem lectus a tortor. Nulla sem odio, hendrerit eu dictum vel, aliquet vel orci. Vivamus sollicitudin enim a semper sodales. Suspendisse ante erat, efficitur vitae mi ultrices, sodales hendrerit nunc. Quisque at maximus felis. Vivamus vehicula, sapien at tincidunt fermentum, massa risus mattis ante, sed gravida neque tellus ut nibh.</p>
+
+        <p>Morbi purus enim, aliquam at purus vitae, consectetur iaculis magna. Morbi rutrum, massa in pellentesque aliquam, ligula erat lacinia tellus, eget volutpat lorem tortor in metus. Nam dolor ipsum, tempus ut dictum sed, pharetra ac libero. Suspendisse ac eleifend justo. Fusce nec laoreet mi, ut egestas lorem. Nam tristique mollis lacus, sed volutpat mi rhoncus id. Morbi sagittis dolor turpis, sit amet dictum neque molestie vitae.</p>
+
+        <p>Donec euismod quam tortor, et vulputate ipsum feugiat et. Praesent malesuada ultricies neque quis maximus. Proin efficitur pretium euismod. Phasellus venenatis interdum iaculis. Aenean vel augue sem. Ut in felis id tellus varius varius. In nisi sapien, convallis at sem sit amet, porta maximus mauris. Morbi placerat metus magna, a ornare dolor tincidunt in. Sed varius risus risus, ac tristique elit posuere ut. Pellentesque cursus, nisi sit amet bibendum pulvinar, ante orci rhoncus diam, nec mollis lectus elit nec lorem. Donec ut elit pretium, tempus arcu ut, pulvinar leo. Nullam ac lectus id tellus commodo condimentum. Praesent enim tortor, eleifend sollicitudin magna et, mollis tincidunt nibh. Cras gravida orci eu semper viverra. Suspendisse finibus pulvinar pellentesque.</p>
+
+        <p>Integer porta turpis sed auctor hendrerit. Sed rutrum bibendum est, eu pretium ipsum scelerisque lobortis. In tempor posuere tellus. Nunc sit amet mi luctus, convallis tellus id, faucibus eros. Vivamus pretium sodales nunc, nec viverra quam vulputate id. Maecenas molestie, purus vitae convallis semper, ante est ullamcorper elit, a tempor lacus leo eget tortor. Praesent posuere blandit pulvinar. Vestibulum gravida quam auctor pellentesque porttitor. Sed et cursus sapien. Cras eget lorem vel sapien tristique ullamcorper at eu augue.</p>
+
+        <p>Fusce ut lacus sit amet libero tempus sagittis in sed sapien. Nunc ut posuere mi, eu consectetur nisl. Suspendisse mattis tellus sed neque volutpat auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eget tortor faucibus, tristique enim sed, tempor justo. Quisque suscipit erat ultrices diam congue, vel placerat felis bibendum. Morbi commodo vitae mi in pretium. Curabitur gravida lacus et erat interdum, vitae interdum turpis dignissim. Aliquam mollis orci at nibh imperdiet, eget accumsan erat egestas. Sed in magna quis lorem fermentum bibendum eget sed augue.</p>
+      </main>
+    </div>
+  </body>
+</html>

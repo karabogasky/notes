@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clearing Floats: :after pseudoclass</title>
+    <style>
+
+      div {
+        width: 200px;
+        height: 200px;
+        background: rgb(11,46,102);
+      }
+
+      #left {
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        /* We don't want text to run up against our block, so
+           we can add a margin to create whitespace between the
+           two elements. */
+      }
+
+      /* We want the first p to be next to the block, the second p
+         to be below the block. */
+      section:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Clearing Floats with <code>:after</code></h1>
+
+    <section>
+      <div id="left"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, mauris at aliquam luctus, mi risus fermentum ante, in facilisis nisi nunc eu ex. Sed eleifend sollicitudin lectus ac condimentum. Phasellus aliquet ornare enim at semper. Mauris tempor nisl et tincidunt vehicula. In diam velit, sagittis vitae sem et, lobortis dictum massa. Nunc lobortis ante mauris, id dignissim quam condimentum vel. Donec non semper tellus. Nunc vitae tellus rutrum, ultrices elit eu, blandit nunc. Praesent suscipit, tellus at suscipit vehicula, mi metus dignissim risus, at fringilla magna quam at lacus.</p>
+    </section>
+
+    <p>Vivamus consequat turpis ut nisl vehicula dapibus. Nulla ullamcorper ante et massa molestie luctus. Fusce eu nunc quis turpis convallis pretium ut eget est. Praesent ut risus nec nibh sagittis pellentesque. Donec tincidunt iaculis finibus. Phasellus commodo lacus nulla, eget tempus nunc mattis in. Sed finibus mauris nec odio euismod, sit amet fermentum massa pulvinar. Nunc eget blandit quam. Nunc diam lectus, tincidunt ut quam eu, pellentesque tempor nulla. Quisque at rhoncus ex. Vivamus consequat suscipit mauris. Fusce sollicitudin eu urna et pretium.</p>
+
+  </body>
+</html>

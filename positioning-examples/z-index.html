@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>z-index</title>
+    <style>
+      #red-box,
+      #orange-box,
+      #yellow-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+        position: relative;
+        z-index: 5;
+        /* In order for the red box to be in front, we must also
+           make it 'non-static', which is why we set its position
+           to relative, but not move it anywhere. If we don't
+           change this, z-index won't work; it will think #red-box
+           is static. */
+      }
+
+      #orange-box {
+        background: orange;
+        position: relative;
+        top: -40px;
+        left: 40px;
+        z-index: 6;
+      }
+
+      #yellow-box {
+        background: yellow;
+        position: relative;
+        top: -80px;
+        left: 80px;
+        z-index: 7;
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+        position: relative;
+        top: -120px;
+        left: 120px;
+        z-index: 10;
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+        position: relative;
+        top: -160px;
+        left: 160px;
+        z-index: 20;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>z-index</h1>
+
+    <div id="red-box"></div>
+    <div id="orange-box"></div>
+    <div id="yellow-box"></div>
+    <div id="green-box"></div>
+    <div id="blue-box"></div>
+
+    <p>When we have overlapping, positioned elements, we can specify a <code>z-index</code> property to order them from front to back.</p>
+
+    <p>Higher numbers will put the element closer to the front.</p>
+
+    <p>Increment z-index values by 5 or 10 (in case you need to squeeze in another element in the future).</p>
+
+  </body>
+</html>

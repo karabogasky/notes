@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Root Ems in Action</title>
+    <style>
+    /*
+     * Use of an internal style is for demonstration purposes only.
+     * Use external style sheets in your own code.
+     *
+     * NOTE: We have set our font size to 16px in the *html* element.
+     *
+     */
+
+    html {
+      font-size: 16px;
+    }
+
+    aside {
+      font-size: 0.75rem; /* 12px */
+    }
+
+    em {
+      font-size: 0.75rem; /* 12px */
+    }
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Root Ems in Action</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <p>We have set the base font of html to 16 pixels.</p>
+
+        <aside>
+          <p>Here is an aside. We have set the font size of the aside to 0.75 rems.</p>
+
+          <p><em>We have also set the font size of <code>&lt;em&gt;</code> to 0.75 rems.</em></p>
+        </aside>
+      </section>
+
+      <section>
+        <p>Notice how the font size <strong>does not</strong> cascade when we use rems.</p>
+
+        <p>The text within <code>&lt;aside&gt;</code> is equivalent to 12 pixels.</p>
+
+        <p>The text within <code>&lt;em&gt;</code> which is nested within <code>&lt;aside&gt;</code> also equivalent to 12 pixels.</p>
+      </section>
+    </main>
+  </body>
+</html>

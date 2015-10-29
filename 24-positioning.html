@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Positioning</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Complex Layouts</h2>
+
+        <p>We've seen how to use the box model and floats to create very simple web layouts, but more complex designs often require elements to be positioned.</p>
+
+        <p>There are four types of positioning:</p>
+
+        <ul>
+          <li>static</li>
+          <li>relative</li>
+          <li>fixed</li>
+          <li>absolute</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Static Positioning</h2>
+
+        <p>Every element has a default value of static.</p>
+
+        <p>We do not have to specify this in our style sheet, but the property/value <code>position: static;</code> does exist.</p>
+
+        <p>It may be necessary to use this property/value to overwrite a CSS declaration for a print or mobile design.</p>
+
+        <p><a href="positioning-examples/static.html">View Example</a></p>
+
+      </section>
+
+
+      <section>
+        <h2>Relative Positioning</h2>
+
+        <p>We can position an element relative to its normal position.</p>
+
+        <p>To move the element, we need to specify the element's position as <code>relative</code>, a horizontal (x-axis) property (<code>left</code> or <code>right</code>) and a vertical (y-axis) property (<code>top</code> or <code>bottom</code>).</p>
+
+        <p>If we do not provide additional properties (<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>), the element remains in place like as if static, but has a more important state than a static element.</p>
+
+        <p><a href="positioning-examples/relative.html">View Example</a></p>
+      </section>
+
+
+      <section>
+        <h2>Fixed Positioning</h2>
+
+        <p>We can position an element in relation to our viewport (browser window).</p>
+
+        <p>To move the element, we need to specify the element's position as <code>fixed</code>, a horizontal (x-axis) property (<code>left</code> or <code>right</code>) and a vertical (y-axis) property (<code>top</code> or <code>bottom</code>).</p>
+
+        <p><a href="positioning-examples/fixed.html">View Example</a></p>
+      </section>
+
+
+      <section>
+        <h2>Absolute Positioning</h2>
+
+        <p>An element with its position set as absolute acts like a fixed element, but relative to the <em>nearest positioned ancestor</em>.</p>
+
+        <p>If the ancestor is static, the element will be positioned in relation to the document body.</p>
+
+        <p>To make this work, there are two necessary steps:</p>
+
+        <ol>
+          <li>the containing element (ancestor) must have the property/value <code>position: relative;</code></li>
+          <li>a horizontal (x-axis) property (left, right), a vertical (y-axis) property (top, bottom) and <code>position: absolute;</code> must be specified on the element to be moved</li>
+        </ol>
+
+        <p><a href="positioning-examples/absolute.html">View Example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>z-index</code></h2>
+
+        <h3>(Or how to move elements in three-dimensional space!)</h3>
+
+        <p>When we move elements using floats or positioning, they are taken out of the natural flow in a 3D sense as well. (Did anyone notice the green box overlapping text in the <a href="positioning-examples/fixed.html">fixed positioning</a> example?)</p>
+
+        <p>We can use the <code>z-index</code> property in CSS declarations to order <em>positioned</em> elements from front to back.</p>
+
+        <p>Higher values will place an element closer to the front.</p>
+
+        <p><em>Tip:</em> Increment z-index values by 5 or 10 (in case you need to squeeze in another element in the future).</p>
+
+        <p><a href="positioning-examples/z-index.html">View Example</a></p>
+      </section>
+
+    </main>
+  </body>
+</html>

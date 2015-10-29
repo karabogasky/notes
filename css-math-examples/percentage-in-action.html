@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Percentage in Action</title>
+    <style>
+    /*
+     * Use of an internal style is for demonstration purposes only.
+     * Use external style sheets in your own code.
+     */
+
+      body {
+        font-size: 16px;
+      }
+
+      aside {
+        font-size: 75%; /* 12px */
+      }
+
+      em {
+        font-size: 75%; /* 9px */
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Percentage in Action</h1>
+    </header>
+
+    <main>
+      <section>
+        <p>We have set the base font of our body to 16 pixels.</p>
+
+        <aside>
+          <p>Here is an aside. We have set the font size of the aside to 75%.</p>
+
+          <p><em>We have also set the font size of <code>&lt;em&gt;</code> to 75%.</em></p>
+        </aside>
+      </section>
+
+      <section>
+        <p>Notice how the font size cascades when we use percentage.</p>
+
+        <p>The text within <code>&lt;aside&gt;</code> is equivalent to 12 pixels.</p>
+
+        <p>The text within <code>&lt;em&gt;</code> which is nested within <code>&lt;aside&gt;</code> is equivalent to 9 pixels.</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Absolute positioning</title>
+    <style>
+      .container {
+        border: 1px solid #333;
+        /* So we can visualize where our boxes are in relation
+           to the parent element, in this case .container */
+        position: relative;
+        /* The above rule is what keeps our #green-box inside
+           the #container element.
+
+           What happens if you remove 'position: relative;' What
+           happens to the green box?
+        */
+      }
+
+      #red-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+        position: absolute;
+        top: 50px;
+        right: 0;
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Absolute positioning</h1>
+
+    <div class="container">
+      <div id="red-box"></div>
+      <div id="green-box"></div>
+      <div id="blue-box"></div>
+    </div>
+
+    <p>An element with its position set as absolute acts like a fixed element, but relative to the <em>nearest positioned ancestor</em>.</p>
+
+    <p>If the ancestor is static, the element will be positioned in relation to the <em>document body</em>.</p>
+
+    <p>There is a <code>div</code> containing the red, green and blue boxes which is set to relative. It has no x- or y-axis values, so it does not move.</p>
+
+    <p>The red and blue boxes are static.</p>
+
+    <p>The green box is absolutely positioned all the way to the right side and 50 pixels from the top of its containing element (<code>div</code>).</p>
+
+    <p>If we remove <code>position: relative;</code> declaration from <code>div</code> (try it!), the green box will appear all the way to the right side and 50 pixels from the top of the window.</p>
+
+  </body>
+</html>
