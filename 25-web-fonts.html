@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Fonts</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Web Fonts</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Browser-Safe Fonts</h2>
+
+        <p>We can change the fonts used on Web pages using the CSS property <code>font-family</code>. This method has limitations. The fonts selected for a site will only render if the <em>font file is located on the user's computer</em>.</p>
+
+        <p>In the late 1990s (and early 2000s) designers relied on a set of common, browser-safe fonts for use based on what was available by default through Windows and Mac operating systems, but choices were limited.</p>
+
+        <p>(This is, in part, why we provide generic <code>font-family</code> declarations in CSS, such as <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code> or <code>fantasy</code>.)</p>
+      </section>
+
+      <section>
+        <h2>Web Fonts</h2>
+
+        <p>Thanks to CSS3, we can use the <code>@font-face</code> property, which allows us to use custom fonts hosted on our own server or through a content-delivery network.</p>
+
+        <p>Sounds great, right? Well, kind of.</p>
+
+        <p>Not all browsers support the same font file format, which means we have to provide multiple files for one font.</p>
+
+        <p>Using one or two Web fonts in combination with browser-safe fonts is an acceptable, balanced practice.</p>
+      </section>
+
+
+      <section>
+        <h2>Where to get Web fonts</h2>
+
+        <p>With the right software, any font file can be transformed into a Web font. However, many typefaces predate the Web and <em>do not</em> include licenses to be used on the Web. (<em>To use a font on the Web without the permission of its foundry would be akin to stealing.</em>)</p>
+
+        <p>The best option is to use a hosted font service. <a href="http://google.com/fonts">Google Fonts</a> provides free, open-source, hosted fonts for your Web site. <a href="https://fonts.com/web-fonts">Fonts.com</a>, <a href="http://fontsquirrel.com/">Font Squirrel</a> and <a href="https://typekit.com/">Typekit</a> are also options, but may require  payment to license a specific font for your site. There may also be limitations as to how the font can be used.</p>
+      </section>
+
+      <section>
+        <h2>How to use web fonts</h2>
+
+        <p>If you are using a hosted option, the service will provide you with code to include in your HTML or CSS file. If you opt to host your own font files, additional setup is required.</p>
+
+        <!--p>Examples on how to use web fonts &mdash; both hosted and self-hosted &mdash; are located in the <code>web-fonts</code> repo.</p-->
+      </section>
+
+      <section>
+        <h2>Additional readings</h2>
+
+        <p>For more information about using <code>@font-face</code> and Web typography:</p>
+
+        <ul>
+          <li>Smashing Magazine: <a href="http://smashingmagazine.com/2011/03/02/the-font-face-rule-revisited-and-useful-tricks/">The @font-face rule revisited and useful tricks</a></li>
+          <li>Nice Web Type: <a href="http://nicewebtype.com/notes/2009/10/30/how-to-use-css-font-face/">How to use CSS @font-face</a></li>
+          <li>Milton Bayer: <a href="http://miltonbayer.com/font-face/">Implementing @font-face</a></li>
+          <li>A List Apart: <a href="http://alistapart.com/article/on-web-typography">On Web Typography</a></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Try using web fonts</h2>
+
+        <p>You should take the time to find a font host and practice applying using web fonts.</p>
+
+        <p>For now, using <a href="http://google.com/fonts">Google Fonts</a> is perfectly acceptable while learning. As you create web sites in the future, pay options may provide a greater selection of fonts for your design.</p>
+      </section>
+
+    </main>
+  </body>
+</html>
