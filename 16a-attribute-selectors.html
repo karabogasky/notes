@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/base.css" rel="stylesheet">
+    <title>Attribute Selectors</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Attribute Selectors</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Attribute Selectors</h2>
+
+        <p>Attribute selectors allow us to target an element with a specific attribute (and the attribute's value(s)).</p>
+
+        <p>A full list of attribute selectors and examples can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Mozilla Developers Network</a>.</p>
+      </section>
+
+
+      <section>
+        <h2>Targeting an attribute</h2>
+
+        <p>We can target an element which includes an attribute, regardless of what the attribute's content is.</p>
+
+        <p><code>a[href]</code> will target an <code>a</code> tag with the <code>href</code> attribute.</p>
+
+        <p><code>abbr[title]</code> will target the <code>abbr</code> tag with the <code>title</code> attribute.</p>
+      </section>
+
+
+      <section>
+        <h2>Targeting an exact value</h2>
+
+        <p>We can also single out attribute with specific values.</p>
+
+        <p><code>img[src="photo.jpg"]</code> will match an <code>img</code> tag with a <code>src</code> of <code>photo.jpg</code>.</p>
+
+        <p>It will only match the exact value such as: <code>&lt;img src="photo.jpg" /&gt;</code>.</p>
+
+        <p>The above example will not match <code>&lt;img src="my-photo.jpg" /&gt;</code>.</p>
+      </section>
+
+
+      <section>
+        <h2>Targeting a partial value</h2>
+
+        <p>Some attribute values may be repeated in an HTML document. We can target this pattern using <code>*=</code>.</p>
+
+        <p><code>img[src*="photo"]</code> will match an <code>img</code> tag with a <code>src</code> which <em>contains</em> <code>photo</code>.</p>
+
+        <p>The above example will match:</p>
+
+        <p><code>&lt;img src="photo.jpg" /&gt;</code></p>
+
+        <p><code>&lt;img src="my-photo.jpg" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Targeting the start of a value</h2>
+
+        <p>We can look to match a pattern at the start of an attribute's value using <code>^=</code>.</p>
+
+        <p><code>a[href^="http"]</code> will match any <code>a</code> tag in which the <code>href</code> attribute begins with <code>http</code>.</p>
+
+        <p>The above example will match:</p>
+
+        <p><code>&lt;a href="http://apple.com"&gt;Apple&lt;/a&gt;</code></p>
+
+        <p><code>&lt;a href="https://gmail.com"&gt;Gmail&lt;/a&gt;</code></p>
+
+        <p>It will not match:</p>
+
+        <p><code>&lt;a href="index.html"&gt;Home&lt;/a&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Targeting the end of a value</h2>
+
+        <p>We can look to match a pattern at the end of an attribute's value using <code>$=</code>.</p>
+
+        <p><code>a[href$=".html"]</code> will match any <code>a</code> tag in which the <code>href</code> attribute ends with <code>.html</code>.</p>
+
+        <p>The above example will match:</p>
+
+        <p><code>&lt;a href="index.html"&gt;Home&lt;/a&gt;</code></p>
+
+        <p>It will not match:</p>
+
+        <p><code>&lt;a href="http://apple.com"&gt;Apple&lt;/a&gt;</code></p>
+      </section>
+
+    </main>
+  </body>
+</html>
