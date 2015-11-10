@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Images</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Web Images</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Types of Graphics</h2>
+
+        <article>
+          <h3>Raster</h3>
+
+          <ul>
+            <li>a grid of pixels</li>
+            <li>cannot scale up</li>
+            <li>edited using Photoshop</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Vector</h3>
+
+          <ul>
+            <li>points, lines, curves, shapes</li>
+            <li>can be scaled up</li>
+            <li>edited using Illustrator</li>
+          </ul>
+        </article>
+      </section>
+
+
+      <section>
+        <h2>Lossy vs. lossless compression</h2>
+
+        <article>
+          <h3>Lossy</h3>
+
+          <ul>
+            <li>file loses data in compression</li>
+            <li>smaller file sizes, but quality is degraded</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Lossless</h3>
+
+          <ul>
+            <li>file does not lose data in compression</li>
+            <li>massive file sizes, but quality is retained</li>
+          </ul>
+        </article>
+      </section>
+
+
+      <section>
+        <h2>GIF: Graphics Interchange Format (<code>.gif</code>)</h2>
+
+        <ul>
+          <li>limited to a palette of 256 colors</li>
+          <li>good for low-color graphics such as logos</li>
+          <li>small animations</li>
+          <li>transparency</li>
+        </ul>
+
+        <img src="img/27-canes-logo.gif" alt="Miami Hurricanes" />
+        <p><small>3 kbytes</small></p>
+      </section>
+
+
+      <section id="png">
+        <h2>PNG: Portable Network Graphics (<code>.png</code>)</h2>
+
+        <ul>
+          <li>a replacement for GIFs (PNG-8)</li>
+          <li>large color palette (PNG-24)</li>
+          <li>transparency</li>
+          <li>smoother (anti-aliased) graphics</li>
+          <li>no animation capabilities</li>
+        </ul>
+
+        <img src="img/27-canes-logo-8.png" alt="Miami Hurricanes" />
+        <p><small>996 kbytes</small></p>
+
+        <img src="img/27-canes-logo-24.png" alt="Miami Hurricanes" />
+        <p><small>1 kbyte</small></p>
+      </section>
+
+
+      <section id="jpg">
+        <h2>JPEG: Joint Photographic Experts Group <span>(<code>.jpg</code> or <code>.jpeg</code>)</span></h2>
+
+        <ul>
+          <li>millions (billions?) of colors</li>
+          <li>used for photographic images</li>
+          <li>compression may leave 'artifacts'</li>
+          <li>progressive display reveals a portion of the image over time</li>
+        </ul>
+
+        <img src="img/27-miami-library.jpg" alt="Richter Library" />
+        <p><small>47 kbytes</small></p>
+      </section>
+
+
+      <section id="svg">
+        <h2>SVG: Scalable Vector Graphics (<code>.svg</code>)</h2>
+
+        <ul>
+          <li>vector format for the web</li>
+          <li>behaviors described in XML</li>
+          <li>supported in all major browsers since 2011</li>
+        </ul>
+
+        <img src="img/27-canes-logo.svg" alt="Miami Hurricanes" class="lg" />
+        <img src="img/27-canes-logo.svg" alt="Miami Hurricanes" class="md" />
+        <img src="img/27-canes-logo.svg" alt="Miami Hurricanes" class="sm" />
+        <p><small>1 kbyte</small></p>
+
+      </section>
+
+
+      <section>
+        <h2>Web graphics toolkit</h2>
+
+        <article>
+          <h3>Adobe Photoshop</h3>
+
+          <ul>
+            <li>used to edit raster images</li>
+            <li>File &raquo; Save for Web</li>
+            <li>allows you to save in raster formats (<code>.gif</code>, <code>.jpg</code>, <code>.png</code>)</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Adobe Illustrator</h3>
+
+          <ul>
+            <li>used to edit vector images</li>
+            <li>File &raquo; Save for Web</li>
+            <li>allows you to save in raster formats (<code>.gif</code>, <code>.jpg</code>, <code>.png</code>)</li>
+            <li>File &raquo; Save As...</li>
+            <li>allows you to save in vector format (<code>.svg</code>)</li>
+          </ul>
+        </article>
+      </section>
+
+
+      <section>
+        <h2>Working with Images</h2>
+
+        <ul>
+          <li>always retain the original image</li>
+          <li>utilize Photoshop layers
+            <ul>
+              <li>Layer » Duplicate Layer</li>
+            </ul>
+          <li>work in RGB color mode (CMYK color mode is for print)</li>
+          <li>save all work as a .psd (Photoshop) or .ai (Illustrator)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Resizing Images</h2>
+
+        <ul>
+          <li>never re-size images by increasing height, width</li>
+          <li>do not distort images with unbalanced proportions
+            <ul>
+              <li>make sure "constrain proportion" icon is selected</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Exporting Images</h2>
+
+        <ul>
+          <li>export to appropriate web format</li>
+          <li>once an image is compressed, data is lost</li>
+          <li>photos should always be saved as <code>.jpg</code></li>
+          <li>graphics should always be saved as <code>.gif</code> or <code>.png</code> or <code>.svg</code></li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Consider...</h2>
+
+        <ul>
+          <li>size vs. quality</li>
+          <li>Does your design focus on strong imagery?
+            <ul>
+              <li>Sacrifice smaller size for better quality.</li>
+            </ul>
+          </li>
+          <li>Does your site have lots of page weight?</li>
+          <li>What considerations are you making for mobile?
+            <ul>
+              <li>Sacrifice quality for smaller file sizes.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>
