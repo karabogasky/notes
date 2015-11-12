@@ -1,0 +1,21 @@
+@import url(fonts.css);
+@import url(screen.css);
+@import url(phones.css);
+@import url(tablets.css);
+@import url(print.css);
+
+/* Note: This demonstrates how multiple stylesheets can be combined
+   into one stylesheet to be linked in HTML files.
+
+   There are pros and cons to this method. It allows a designer to
+   keep files organized by the content of the stylesheet. However,
+   this method requires mutliple requests from a server and may
+   slow down loading time.
+
+   The latter issue is really beyond the scope of this course. If
+   such a method were utilized, chances are there are engineers who
+   can optimize a server to make the process faster.
+
+   But I figured this was worth introducing since it reinforces the
+   idea of keeping structure and presentation separate.
+*/

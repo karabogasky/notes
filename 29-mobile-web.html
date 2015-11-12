@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Designing for the Mobile Web</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Designing for the Mobile Web</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Think about media (again)</h2>
+
+        <p>How does a web site differ from a mobile site?</p>
+
+        <p>Visit some of your favorite sites. Note the differences. What is similar? What is different?</p>
+      </section>
+
+
+      <section>
+        <h2>Web &amp; Mobile</h2>
+
+        <p>Some web sites actually host two separate sites for the web and mobile. There are negatives to this:</p>
+
+        <ul>
+          <li>more infrastructure</li>
+          <li>repeated efforts</li>
+          <li>redirection (which can impact SEO)</li>
+        </ul>
+
+        <h3>Examples</h3>
+
+        <ul>
+          <li><a href="http://www.nytimes.com/">New York Times</a></li>
+          <li><a href="http://mobile.nytimes.com/">New York Times (Mobile)</a></li>
+        </ul>
+
+        <p>There has to be a better way, right?</p>
+      </section>
+
+
+      <section>
+        <h2>Benefits of Responsive Design</h2>
+
+        <p>By creating a responsive, fluid design, we can use one HTML file and adjust the styling based on the device being used to browse the site.</p>
+
+        <h3>Example</h3>
+
+        <ul>
+          <li><a href="http://www.bostonglobe.com">Boston Globe</a></li>
+          <li><a href="http://www.foxsports.com/florida">Fox Sports Florida</a></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Things to consider</h2>
+
+        <ul>
+          <li>screen size</li>
+          <li>bandwidth</li>
+          <li>browser capabilities</li>
+          <li>device capabilities</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2><code>@media</code> queries</h2>
+
+        <p>@media queries allow us to specify styles based on conditions.</p>
+
+        <p><strong><code>@media (max-width: 320px) { }</code></strong></p>
+
+        <p>...will only apply styles if the maximum width of the window is 320 pixels.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Media features</h2>
+
+        <ul>
+          <li>aspect-ratio</li>
+          <li>device-aspect-ratio</li>
+          <li>device-height</li>
+          <li>device-width</li>
+          <li>height</li>
+          <li>orientation</li>
+          <li>resolution</li>
+          <li>width</li>
+        </ul>
+
+        <p>And some features not used as frequently:</p>
+
+        <ul>
+          <li>color</li>
+          <li>color-index</li>
+          <li>grid</li>
+          <li>monochrome</li>
+          <li>scan</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Two components for the mobile web</h2>
+
+        <ol>
+          <li><code>meta</code> tag specifying <code>viewport</code></li>
+          <li>a mobile stylesheet with an <code>@media</code> query</li>
+        </ol>
+      </section>
+
+
+      <section>
+        <h2><code>HTML</code></h2>
+
+        <p><code>&lt;meta name="viewport" content="width=device-width; initial-scale=1;" /&gt;</code></p>
+
+      </section>
+
+
+      <section>
+        <h2><code>meta viewport</code></h2>
+
+        <p>Adding <code>meta viewport</code> was a solution put forth by Apple. Many browser and mobile device makers adopted it. But not Microsoft or more importantly, the W3C. The W3C is working on a standard which would have us apply this setting through CSS.</p>
+
+        <p>The <code>@viewport</code> rule is only supported by Opera and IE 10 and requires vendor prefixing.</p>
+      </section>
+
+
+      <section>
+        <h2>Vendor Prefixing</h2>
+
+        <p><em>Just an aside here...</em></p>
+
+        <p>As new CSS features are added to browsers, they're released in a beta state &mdash; they might work, but maybe not according to W3C specs.</p>
+
+        <p>So certain CSS properties are 'prefixed' with browser identification:</p>
+
+        <ul>
+          <li><code>-ms-</code>: Microsoft</li>
+          <li><code>-moz-</code>: Mozilla (Firefox)</li>
+          <li><code>-o-</code>: Opera</li>
+          <li><code>-webkit-</code>: Safari, Chrome (webkit browsers)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Maximum Scale</h2>
+
+        <p>If you read mobile web tutorials, some may suggest using an attribute/value pair: <code>maximum-scale=1;</code> in <code>meta viewport</code>.</p>
+
+        <p><strong>DO NOT</strong> include this attribute.</p>
+
+        <p>It hinders the ability for a user to pinch zoom your web site, making it less accessible.</p>
+      </section>
+
+
+      <section>
+        <h2>More HTML</h2>
+
+        <p>You also need to add a link to your mobile stylesheet <strong>AFTER</strong> you link to your (web) <code>screen.css</code>.</p>
+
+        <p><code>&lt;link rel="stylesheet" media="screen" href="css/mobile.css" /&gt;</code></p>
+
+        <p><small>Why? Because the last styles written 'win out.'</small></p>
+      </section>
+
+
+      <section>
+        <h2>The catch</h2>
+
+        <p>There's a <code>@media</code> property: <code>handheld</code>.</p>
+
+        <p>But today's mobile browsers (iOS, Android) don't support it. So don't use it.</p>
+
+        <p>Apple and Google touted their devices as being able to view the web &mdash; as it is &mdash; and disabled the use of <code>handheld</code>.</p>
+
+        <p>So... we have to use <code>screen</code> with set widths (and/or orientation) and overwrite rules created for the web.</p>
+      </section>
+
+
+      <section>
+        <h2>Setting up your CSS</h2>
+
+        <p>It's a good idea to keep your screen and mobile styles separate.</p>
+
+        <p>Start with the following in a new document:</p>
+
+        <pre>@media (max-width: 320px) {
+  ...
+}</pre>
+      </section>
+
+
+      <section>
+        <h2>Modifying your site for mobile</h2>
+
+        <p>Mobile design basically involves overwriting screen rules you created for the web version of your site.</p>
+
+        <p>Copy each of the rules from your web style sheet (<code>screen.css</code>) into your mobile stylesheet and adjust them line-by-line.</p>
+
+        <p>If you do not overwrite rules from <code>screen.css</code>, the mobile version of the site will <em>inherit</em> those rules.</p>
+
+        <p><strong>Suggestion:</strong> Don't start building for mobile until you've finalized your design for web.</p>
+      </section>
+
+
+      <section>
+        <h2>Some questions to ask</h2>
+
+        <p>Should the font size be bigger? (Yes.)</p>
+
+        <p>Do you have to remove floats or positioning?</p>
+
+        <p>Are there elements which might be 'hidden' in a mobile design? (Yes. Multimedia, perhaps.)</p>
+
+        <p>Do I need to adjust HTML to include content to only be displayed on mobile?</p>
+
+        <p>Different designs will pose different challenges. Be sure to give your site a critical eye.</p>
+      </section>
+
+
+      <section>
+        <h2>Beyond smartphones</h2>
+
+        <p>Mobile design doesn't have to be limited to tiny screens.</p>
+
+        <p>You can create styles for different <em>breakpoints</em> &mdash; -- different max-width values based on screen sizes.</p>
+
+        <p>A great, fluid design may not need breakpoints. But the more complex a design (i.e. <a href="http://www.bostonglobe.com/">Boston Globe</a>) the more necessary they become.</p>
+      </section>
+
+
+      <section>
+        <h2>Resources</h2>
+
+        <ul>
+          <li><a href="http://alistapart.com/article/fluidgrids">A List Apart: Fluid Grids</a></li>
+          <li><a href="http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972">Quick Tip: Don't Forget the Viewport Meta Tag</a></li>
+          <li><a href="http://www.quirksmode.org/mobile/metaviewport/">Quirks Mode: Meta Viewport</a></li>
+          <li><a href="http://responsivedesign.is/">Responsive Design</a>
+            <ul>
+              <li><a href="http://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints">Why You Don't Need Device-Specific Breakpoints</a></li>
+            </ul>
+          </li>
+          <li><a href="http://designmodo.com/responsive-design-examples/">Responsive Web Design: 50 Examples and Best Practices</a></li>
+          <li><a href="http://designinstruct.com/roundups/infographics-learn-responsive-web-design/">Ten Infographics for Learning About Responsive Design</a></li>
+          <li><a href="http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design">The 2014 Guide to Responsive Web Design</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the Viewport Meta Tag to Control Layout on Mobile Browsers</a></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Tools</h2>
+
+        <ul>
+          <li><a href="http://caniuse.com/">Can I Use...?</a></li>
+          <li><a href="http://mydevice.io/">MyDevice.io</a></li>
+          <li><a href="http://screensiz.es/phone">Screensiz.es</a></li>
+          <li><a href="http://viewportsizes.com/">Viewport Sizes</a></li>
+          <li><a href="http://dpi.lv/">DPI Love</a></li>
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>

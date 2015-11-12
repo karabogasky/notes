@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background: url("../img/subtle_grunge.png");
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+#wrapper {
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+header span {
+  display: none;
+}
+
+img.mobile {
+  width: 16px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+iframe {
+  width: 600px;
+  height: 337px;
+}
+
+footer {
+  font-size: 75%;
+}
+
+footer a[href^="tel"] {
+  display: none;
+}
